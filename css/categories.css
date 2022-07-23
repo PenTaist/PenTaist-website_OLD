@@ -1,0 +1,166 @@
+/* TOPBAR + NAVBARS */
+.topbar {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+}
+
+.navbar-links {
+    width: 50%;
+    height: auto;
+    margin: 1%;
+}
+
+.navbar-links a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 2%;
+    transition: all 0.3s;
+}
+
+.navbar-links a:hover {
+    color: gray;
+    transition: all 0.3s;
+}
+
+.navbar-social {
+    margin: 1%;
+}
+
+.navbar-social img {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s;
+}
+
+.navbar-social img:hover {
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.navbar-links a:nth-child(2) {
+    color: gray;
+}
+/* -------------------------------------------------------------------------------------------------------- */
+/* CATEGORIES */
+.categories1 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    margin: 1%;
+}
+
+.categories1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.categories2 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    margin: 1%;
+}
+
+.categories2 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.cracking {
+    background-image: url('/img/cracking.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 200%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.scanning {
+    background-image: url('/img/scanning.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 200%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.outils {
+    background-image: url('/img/outils.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 200%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.attaques-sans-fil {
+    margin-top: 60%;
+    background-image: url('/img/attaques-sans-fil.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 210px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.creation-virus {
+    margin-top: 60%;
+    background-image: url('/img/creation-virus.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 210px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.installation-kali {
+    margin-top: 60%;
+    background-image: url('/img/installation-kali.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 210px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.cracking:hover, .scanning:hover, .outils:hover, .attaques-sans-fil:hover, .creation-virus:hover, .installation-kali:hover {
+    transition: all 0.3s;
+    transform: scale(1.1);
+}

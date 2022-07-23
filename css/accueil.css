@@ -1,0 +1,77 @@
+body {
+    background-image: url('/img/kali.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* MAIN PAGE */
+.main {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main h1, .main h2, .main p {
+    color: #fff;
+}
+
+.choose h1 {
+    color: #fff;
+}
+
+.choose p {
+    color: #ccc;
+}
+
+.choose {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.choose-an-option {
+    margin: 3% 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.categories {
+    transition: all 0.3s;
+    background-image: url('/img/categories.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.credits {
+    transition: all 0.3s;
+    background-image: url('/img/credits.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.box-link {
+    text-decoration: none;
+}
+
+.categories:hover, .credits:hover {
+    transition: all 0.3s;
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1311px) {
+    body {
+        background-color: #000;
+    }
+}
