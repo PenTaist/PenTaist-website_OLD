@@ -1,5 +1,5 @@
 body {
-    background-image: url('/img/kali.jpg');
+    background-image: url(../img/kali.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -8,10 +8,19 @@ body {
 .main {
     background-repeat: no-repeat;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .main h1, .main h2, .main p {
@@ -27,23 +36,38 @@ body {
 }
 
 .choose {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .choose-an-option {
     margin: 3% 0;
     color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .categories {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
-    background-image: url('/img/categories.jpg');
+    background-image: url(../img/categories.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
@@ -52,8 +76,10 @@ body {
 }
 
 .credits {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
-    background-image: url('/img/credits.jpg');
+    background-image: url(../img/credits.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
@@ -66,8 +92,12 @@ body {
 }
 
 .categories:hover, .credits:hover {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 @media only screen and (max-width: 1311px) {

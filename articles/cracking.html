@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/articles.css">
+    <link rel="stylesheet" href="css/cracking.css">
     <title>PenTaist - Cracking</title>
 </head>
 <body>
@@ -19,6 +19,200 @@
         <nav class="navbar-social">
             <a href="https://discord.gg/TDXXq3XxrW"><img src="../img/discord.png" alt="discord"></a>
         </nav>
+    </div>
+    <div class="menu">
+        <h2>Table des matières :</h2>
+        <h3>I - Introduction ></h3>
+        <a href="#c-quoi">> Qu'es ce que le Cracking ?</a>
+        <a href="#on-crack-quoi">> Que peut on cracker ?</a>
+        <a href="#cracking-pas-bruteforce">> Cracking par BruteForce</a>
+        <a href="#cracking-par-dictionnaire">> Cracking par dictionnaire</a>
+        <h3>II - Les outils</h3>
+        <a href="#crunch">> Crunch</a>
+        <a href="#john">> John</a>
+        <a href="#hashcat">> HashCat</a>
+        <a href="#aircrack-ng">> Aircrack-ng</a>
+        <a href="#hydra">> Hydra</a>
+        <h3>III - Les wordlists (listes de mots de passes)</h3>
+        <a href="#rockyou">> Rockyou</a>
+        <a href="#crack-station">> Crack station</a>
+        <a href="#probable-wordlists">> Probable Wordlists</a>
+        <a href="#richelieu">> Richelieu</a>
+        <h3>IV - Conclusion</h3>
+        <a href="#conclusion">> Conclusion</a>
+    </div>
+    <div class="parties">
+        <div class="introduction">
+            <h1>I - Introduction</h1>
+            <br>
+            <h2 id="c-quoi">Qu'es ce que le Cracking ?</h2>
+            <p>Le Cracking est le processus de récupération de mots de passe à partir de données stockées ou transmises par un système informatique.</p>
+            <p>En gros, c'est le faire de retrouver un mot de passe à partir de données chiffrés comme un hash par exemple</p>
+            <br>
+            <h2 id="on-crack-quoi">Que peut on cracker ?</h2>
+            <p>On crack principalement les hash car ils contiennent généralement un mot de passe.</p>
+            <p>Quand on s'inscris sur un site, celui-ci stocke votre mot de passe dans sa base de donnée sous forme de hash. Ce procédé permet que si la base de donnée se fait pirater, le hacker n'a pas directement votre mot de passe.</p>
+            <p>Un hash ne peut pas être déchiffrer aussi simplement que le md5 ou le sha1 car une fois que le mot de passe à été hashé, on ne peut plus faire machine arrière.</p>
+            <p>Il existe cependant un moyen de retrouver le mot de passe à partir du hash et la technique est assez simple</p>
+            <p>Il suffit simplement de hasher un mot de passe et de le comparer avec le hash que l'on as</p>
+            <p>Des outil on été crée pour automatiser ce processus affin de tester des millier/millions/milliars de mots de passes par seconde</p>
+            <p>Dans cet article, je vais vous montrer ces fameux outils et vous expliquer comment vous en servir.</p>
+            <br>
+            <h2 id="cracking-par-bruteforce">Cracking par BruteForce</h2>
+            <p>Le cracking par BruteForce consite à tester toutes les possibilités possibles et imaginables afin de trouver le mot de passe.</p>
+            <p>C'est la technique la plus longue mais elle peut marcher si le mot de passe est court et pas trop compliqué.</p>
+            <br>
+            <h2 id="cracking-pas-dictionnaire">Cracking par dictionnaire</h2>
+            <p>Le cracking par dictionnaire consiste à tester les mots de passes avec une liste de mots de passes.</p>
+            <p>C'est la technique pour fonctionne le plus souvent car les mots de passes dans ces listes sont des mots de passes qui ont fuités de bases de données de sites donc si le mot de passe à été réutilisé sur plusieurs sites, il deviens très facile à cracker.</p>
+        </div>
+        <div class="outils">
+            <br>
+            <h1>II - Les outils</h1>
+            <br>
+            <h2 id="crunch">Crunch</h2>
+            <p>
+                Crunch est un générateur de wordlists où vous pouvez spécifier un jeu de caractères standard ou n'importe quel jeu de caractères à utiliser pour générer les wordlists. Les wordlists sont créées par combinaison et permutation d'un ensemble de caractères. Vous pouvez déterminer le nombre de caractères et la taille de la wordlist.
+            </p>
+            <h4>Commandes :</h4>
+            <p>Utilisation :</p>
+            <p>crunch [longueur min] [longueur max] [caractères]</p>
+            <hr>
+            <p>Afficher l'aide :</p>
+            <p>crunch -h</p>
+            <hr>
+            <p>Générer une wordlists d'une longueur de 4 avec tout les chiffres dans un fichier nommé "chiffres.txt" :</p>
+            <p>crunch 0 4 0123456789 > chiffres.txt</p>
+            <hr>
+            <p>Générer une wordlist d'une longueur de 10 avec toutes les lettres de l'alphabet dans un fichier nommé "lettres.txt" :</p>
+            <p>crunch 0 10 abcdefghijklmnopqrstuvwxyz > lettres.txt</p>
+            <hr>
+            <h4>Une version windows est disponible pour Crunsh : <a href="https://github.com/shadwork/Windows-Crunch/releases">Crunsh windows</a></h4>
+            <h2 id="john">John</h2>
+            <p>John the Ripper est un outil conçu pour aider les administrateurs système à trouver des mots de passe faibles (faciles à deviner ou à déchiffrer par la force brute), et même envoyer automatiquement des e-mails aux utilisateurs pour les avertir, s'ils le souhaitent.</p>
+            <p>Outre plusieurs types de hachage de mot de passe crypt(3) que l'on trouve le plus souvent sur diverses versions d'Unix, les hachages Kerberos AFS et Windows NT/2000/XP/2003 LM sont pris en charge, ainsi que plusieurs autres avec des correctifs contribués.</p>
+            <h4>Commandes :</h4>
+            <p>Utilisation (la plus simple) :</p>
+            <p>john hash.txt</p>
+            <hr>
+            <p>Afficher l'aide :</p>
+            <p>john --help</p>
+            <hr>
+            <p>Cracker un hash en précisant un wordlist :</p>
+            <p>john hash.txt --wordlist="/usr/share/wordlists/rockyou.txt"</p>
+            <hr>
+            <p>spécifier un mode de craquage (utilisez le paramètre précis correspondant à ce mode) :</p>
+            <p>john --single hash.txt</p>
+            <p>john --incremental hash.txt</p>
+            <hr>
+            <p>Ajouter des règles :</p>
+            <p>john --wordlist="/usr/share/wordlists/rockyou.txt" --rules --hash.txt</p>
+            <hr>
+            <p>Afficher les mots de passes crackés :</p>
+            <p>john --show hash.txt</p>
+            <p>john --show --users=0 hash.txt</p>
+            <p>john –-show –-groups=0,1 hash.txt</p>
+            <hr>
+            <h4>Une version windows est disponible pour John : <a href="https://www.usitility.com/fr/john-the-ripper/">John for windows</a></h4>
+            <h2 id="hashcat">HashCat</h2>
+            <p>Hashcat est un cracker de mots de passe populaire et conçu pour cracker les mots de passe les plus complexes. Pour ce faire, il permet le craquage d'un mot de passe spécifique de plusieurs manières, combinées à la polyvalence et à la rapidité.</p>
+            <p>Les représentations de mot de passe sont principalement associées aux clés de hachage, telles que MD5, SHA, WHIRLPOOL, RipeMD, NTMLv1, NTMLv2, etc. Ils sont également définis comme une fonction à sens unique - il s'agit d'une opération mathématique facile à réaliser, mais très difficile à désosser.</p>
+            <p>Hashcat transforme les données lisibles en un état tronqué (il s'agit d'une chaîne aléatoire de taille fixe). Les hachages ne permettent pas à quelqu'un de déchiffrer des données avec une clé spécifique, comme le permettent les protocoles de cryptage standard. Hashcat utilise des dictionnaires précalculés, des tables arc-en-ciel et même des approches de force brute pour trouver un moyen efficace et efficient de déchiffrer les mots de passe.</p>
+            <p>ATTENTION : hashcat ne peut déchiffrer que les hash de types md5, sha1 etc...</p>
+            <h4>Commandes :</h4>
+            <p>Utilisation :</p>
+            <p>hashcat [option] [hash] [wordlist]</p>
+            <hr>
+            <p>Afficher l'aide :</p>
+            <p>hashcat -h</p>
+            <hr>
+            <p>Spécifier une wordlist :</p>
+            <p>hashcat -m 0 -a 0 hash.txt rockyou.txt</p>
+            <hr>
+            <p>Afficher les mot de passe crackés :</p>
+            <p>hashcat -m 0 -a 0 hash.txt rockyou.txt --show</p>
+            <hr>
+            <p>Déchiffrer les mots de passes numériques :</p>
+            <p>hashcat -m 100 hash.txt -a 3 ?d?d?d?d?d?d</p>
+            <hr>
+            <h4>Une version windows est disponible pour HashCat : <a href="https://hashcat.fr.malavida.com/windows/">HashCat for windows</a></h4>
+            <h2 id="aircrack-ng">Aircrack-ng</h2>
+            <p>aircrack-ng est un programme de craquage WEP/WPA 802.11a/b/g qui peut récupérer une clé WEP 40 bits, 104 bits, 256 bits ou 512 bits une fois que suffisamment de paquets chiffrés ont été collectés. Il peut également attaquer les réseaux WPA1/2 avec des méthodes avancées ou simplement par force brute.</p>
+            <p>Il implémente l'attaque FMS standard avec quelques optimisations, rendant ainsi l'attaque beaucoup plus rapide par rapport aux autres outils de craquage WEP. Il peut également utiliser pleinement un système multiprocesseur à sa pleine puissance afin d'accélérer le processus de craquage.</p>
+            <p>aircrack-ng est un fork d'aircrack, car ce projet a été arrêté par le mainteneur en amont.</p>
+            <h4>Commandes :</h4>
+            <p>Utilisation :</p>
+            <p>aircrack-ng -w WORDLIST HASH</p>
+            <hr>
+            <p>Cracker les clés WPA/WPA2 :</p>
+            <p>aircrack-ng -w /usr/share/wordlists/rockyou.txt wpa_hash.cap</p>
+            <hr>
+            <p>Cracker les clés WEP :</p>
+            <p>aircrack-ng wep_hash.ivs</p>
+            <hr>
+            <h4>Une version windows est disponnible pour Aircrack-ng : <a href="https://www.aircrack-ng.org/">Aircrack-ng for windows</a></h4>
+            <h2 id="hydra">Hydra</h2>
+            <p>Hydra est un outil de piratage en ligne parallélisé qui prend en charge de nombreux protocoles d'attaque. Il est très rapide et flexible, et de nouveaux modules sont faciles à ajouter.</p>
+            <p>Cet outil permet aux chercheurs et aux consultants en sécurité de montrer à quel point il serait facile d'obtenir à distance un accès non autorisé à un système.</p>
+            <p>Il prend en charge :</p>
+            <p>Cisco AAA, Cisco auth, Cisco enable, CVS, FTP, HTTP(S)-FORM-GET, HTTP(S)-FORM-POST, HTTP(S)-GET, HTTP(S)-HEAD, HTTP- Proxy, ICQ, IMAP, IRC, LDAP, MS-SQL, MySQL, NNTP, Oracle Listener, Oracle SID, PC-Anywhere, PC-NFS, POP3, PostgreSQL, RDP, Rexec, Rlogin, Rsh, SIP, SMB(NT) , SMTP, SMTP Enum, SNMP v1+v2+v3, SOCKS5, SSH (v1 et v2), SSHKEY, Subversion, Teamspeak (TS2), Telnet, VMware-Auth, VNC et XMPP.</p>
+            <h4>Commandes :</h4>
+            <p>Utilisation :</p>
+            <p>hydra -l/-L USER/USERLIST -p/-P PASSWORD/WORDLIST PROTOCOL://HOST:PORT</p>
+            <hr>
+            <p>Spécifier un utilisateur ou un liste d'utilisateurs :</p>
+            <p>hydra -l utilisateur</p>
+            <p>hydra -L utilisateurs.txt</p>
+            <hr>
+            <p>Spécifier un mot de passe ou une wordlist :</p>
+            <p>hydra -p mot_de_passe</p>
+            <p>hydra -P mots_de_passes.txt</p>
+            <hr>
+            <p>Pirater les serveur SSH et FTP :</p>
+            <p>hydra -l sshuser -p sshpassword ssh://10.10.10.10:22</p>
+            <p>hydra -l ftpuser -p ftppassword ftp://10.10.10.10:21</p>
+            <hr>
+            <p>Piratage de formulaire HTTP :</p>
+            <p>hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.10.10 http-post-form "/login.php:username=admin&password=^PASS^:Invalid Password!"</p>
+            <p>Le "Invalid Password!" à la fin de la commande spécifie la réponse du formulaire en cas de mauvais utilisateur ou mot de passe.</p>
+            <hr>
+            <h4>Une version windows est disponible pour Hydra : <a href="https://github.com/maaaaz/thc-hydra-windows">Hydra for windows</a></h4>
+        </div>
+        <div class="wordlists">
+            <br>
+            <h1>III - Les wordlists (listes de mots de passes)</h1>
+            <br>
+            <h2 id="rockyou">Rockyou</h2>
+            <p>
+                Rockyou est surement la wordlist la plus populaire du monde du hacking. En 2009, l’entreprise rockyou, qui développe des extensions pour MySpace notamment, est hackée. Les hackeurs ont pu récupérer les mots de passe de dizaines de millions d’utilisateurs, car ces derniers étaient stockés en clair dans la base de données, et non chiffrés. Une mine d’or pour les hackeurs et pour les experts en sécurités, qui se sont empressés de faire de ses données une compilation des mots de passe les plus utilisés : rockyou.txt. Elle contient un peu plus de 14 millions de mots de passe.
+            </p>
+            <a href="https://github.com/praetorian-inc/Hob0Rules/blob/master/wordlists/rockyou.txt.gz">Télécharger Rockyou</a>
+            <h2 id="crack-station">Crack Station</h2>
+            <p>
+                Une des wordlist les plus complètes. Elle contient 1,4 millards de mots de passe, pour une taille de 15Go. C’est une compilation de toutes les wordlists, tous les dictionnaires, de tous les mots contenus dans les pages wikipédia…
+            </p>
+            <a href="https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm">Télécharger Crack Station</a>
+            <h2 id="probable-wordlists">Probable Wordlists</h2>
+            <p>
+                Ce projet Github contient une compilation des mots de passe les plus utilisés dans des centaines de wordlists. La liste brute, Real-Password, contient 27Go de mots de passe de toute sorte. Cette liste existe dans sa version WPA, Real WPA passwords, qui contient la même liste filtrée pour correspondre à la longueur d’un mot de passe WPA (de 8 à 53 caractères). Elle fait, quant à elle, 25Go
+            </p>
+            <a href="https://github.com/berzerk0/Probable-Wordlists/blob/master/Downloads.md">Télécharger Probable Wordlists</a>
+            <h2 id="richelieu">Richelieu</h2>
+            <p>
+                Une toute petite liste par rapport aux mastodontes cités précédemment, mais qui peut s’avérer utile, car elle cible les mots de passe français. Il s’agit d’une compilation des 20 mille mots de passe les plus utilisés par des Français.
+            </p>
+            <a href="https://github.com/tarraschk/richelieu">Télécharger Richelieu</a>
+        </div>
+        <div class="conclusion">
+            <br>
+            <h1>IV - Conclusion</h1>
+            <br>
+            <h2 id="conclusion">Conclusion</h2>
+            <p>- Le cracking permet de retrouver un mot de passe à partir de sa version chiffré que l'on appele "hash"</p>
+            <p>- Il existe plusieurs outils pour automatiser le processus, ils peuvent tester plus d'un milion de mots de passes par secondes</p>
+            <p>- Il y a 2 méthodes principales pour cracker un mot de passe a partit de son hash. Le cracking par BruteForce et le cracking par dictionnaire.</p>
+            <p>- Cela peut être plus ou moins long en fonction de la complexité du mot de passe (longueur, chiffres, majuscules, caractères spéciaux etc...).</p>
+        </div>
     </div>
 </body>
 </html>
