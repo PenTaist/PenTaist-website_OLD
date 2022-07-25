@@ -33,7 +33,7 @@
         <a href="#hashcat">> HashCat</a>
         <a href="#aircrack-ng">> Aircrack-ng</a>
         <a href="#hydra">> Hydra</a>
-        <h3>III - Les wordlists (listes de mots de passes)</h3>
+        <h3>III - Les WordLists (listes de mots de passes)</h3>
         <a href="#rockyou">> Rockyou</a>
         <a href="#crack-station">> Crack station</a>
         <a href="#probable-wordlists">> Probable Wordlists</a>
@@ -70,7 +70,10 @@
             <br>
             <h1>II - Les outils</h1>
             <br>
-            <h2 id="crunch">Crunch</h2>
+            <div class="crunch">
+                <h2 id="crunch">Crunch</h2>
+                <img src="img/crunch.png" alt="crunch">
+            </div>
             <p>
                 Crunch est un générateur de wordlists où vous pouvez spécifier un jeu de caractères standard ou n'importe quel jeu de caractères à utiliser pour générer les wordlists. Les wordlists sont créées par combinaison et permutation d'un ensemble de caractères. Vous pouvez déterminer le nombre de caractères et la taille de la wordlist.
             </p>
@@ -88,7 +91,11 @@
             <p>crunch 0 10 abcdefghijklmnopqrstuvwxyz > lettres.txt</p>
             <hr>
             <h4>Une version windows est disponible pour Crunsh : <a href="https://github.com/shadwork/Windows-Crunch/releases">Crunsh windows</a></h4>
-            <h2 id="john">John</h2>
+            <br>
+            <div class="john">
+                <h2 id="john">John</h2>
+                <img src="img/john.png" alt="john">
+            </div>
             <p>John the Ripper est un outil conçu pour aider les administrateurs système à trouver des mots de passe faibles (faciles à deviner ou à déchiffrer par la force brute), et même envoyer automatiquement des e-mails aux utilisateurs pour les avertir, s'ils le souhaitent.</p>
             <p>Outre plusieurs types de hachage de mot de passe crypt(3) que l'on trouve le plus souvent sur diverses versions d'Unix, les hachages Kerberos AFS et Windows NT/2000/XP/2003 LM sont pris en charge, ainsi que plusieurs autres avec des correctifs contribués.</p>
             <h4>Commandes :</h4>
@@ -114,7 +121,11 @@
             <p>john –-show –-groups=0,1 hash.txt</p>
             <hr>
             <h4>Une version windows est disponible pour John : <a href="https://www.usitility.com/fr/john-the-ripper/">John for windows</a></h4>
-            <h2 id="hashcat">HashCat</h2>
+            <br>
+            <div class="hashcat">
+                <h2 id="hashcat">HashCat</h2>
+                <img src="img/hashcat.jpg" alt="hashcat">
+            </div>
             <p>Hashcat est un cracker de mots de passe populaire et conçu pour cracker les mots de passe les plus complexes. Pour ce faire, il permet le craquage d'un mot de passe spécifique de plusieurs manières, combinées à la polyvalence et à la rapidité.</p>
             <p>Les représentations de mot de passe sont principalement associées aux clés de hachage, telles que MD5, SHA, WHIRLPOOL, RipeMD, NTMLv1, NTMLv2, etc. Ils sont également définis comme une fonction à sens unique - il s'agit d'une opération mathématique facile à réaliser, mais très difficile à désosser.</p>
             <p>Hashcat transforme les données lisibles en un état tronqué (il s'agit d'une chaîne aléatoire de taille fixe). Les hachages ne permettent pas à quelqu'un de déchiffrer des données avec une clé spécifique, comme le permettent les protocoles de cryptage standard. Hashcat utilise des dictionnaires précalculés, des tables arc-en-ciel et même des approches de force brute pour trouver un moyen efficace et efficient de déchiffrer les mots de passe.</p>
@@ -136,7 +147,11 @@
             <p>hashcat -m 100 hash.txt -a 3 ?d?d?d?d?d?d</p>
             <hr>
             <h4>Une version windows est disponible pour HashCat : <a href="https://hashcat.fr.malavida.com/windows/">HashCat for windows</a></h4>
-            <h2 id="aircrack-ng">Aircrack-ng</h2>
+            <br>
+            <div class="aircrack-ng">
+                <h2 id="aircrack-ng">Aircrack-ng</h2>
+                <img src="img/aircrack-ng.png" alt="aircrack-ng">
+            </div>
             <p>aircrack-ng est un programme de craquage WEP/WPA 802.11a/b/g qui peut récupérer une clé WEP 40 bits, 104 bits, 256 bits ou 512 bits une fois que suffisamment de paquets chiffrés ont été collectés. Il peut également attaquer les réseaux WPA1/2 avec des méthodes avancées ou simplement par force brute.</p>
             <p>Il implémente l'attaque FMS standard avec quelques optimisations, rendant ainsi l'attaque beaucoup plus rapide par rapport aux autres outils de craquage WEP. Il peut également utiliser pleinement un système multiprocesseur à sa pleine puissance afin d'accélérer le processus de craquage.</p>
             <p>aircrack-ng est un fork d'aircrack, car ce projet a été arrêté par le mainteneur en amont.</p>
@@ -151,7 +166,11 @@
             <p>aircrack-ng wep_hash.ivs</p>
             <hr>
             <h4>Une version windows est disponnible pour Aircrack-ng : <a href="https://www.aircrack-ng.org/">Aircrack-ng for windows</a></h4>
-            <h2 id="hydra">Hydra</h2>
+            <br>
+            <div class="hydra">
+                <h2 id="hydra">Hydra</h2>
+                <img src="img/hydra.jpg" alt="hydra">
+            </div>
             <p>Hydra est un outil de piratage en ligne parallélisé qui prend en charge de nombreux protocoles d'attaque. Il est très rapide et flexible, et de nouveaux modules sont faciles à ajouter.</p>
             <p>Cet outil permet aux chercheurs et aux consultants en sécurité de montrer à quel point il serait facile d'obtenir à distance un accès non autorisé à un système.</p>
             <p>Il prend en charge :</p>
@@ -180,7 +199,7 @@
         </div>
         <div class="wordlists">
             <br>
-            <h1>III - Les wordlists (listes de mots de passes)</h1>
+            <h1>III - Les WordLists (listes de mots de passes)</h1>
             <br>
             <h2 id="rockyou">Rockyou</h2>
             <p>
