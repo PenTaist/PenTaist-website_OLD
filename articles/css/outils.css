@@ -191,3 +191,7 @@
     width: 30%;
     height: auto;
 }
+
+.ngrock_txtandimg {
+    border-radius: 10px;
+}
