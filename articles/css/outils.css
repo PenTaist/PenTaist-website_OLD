@@ -178,3 +178,7 @@
     width: 30%;
     height: auto;
 }
+
+.parties img {
+    border-radius: 10px;
+}
