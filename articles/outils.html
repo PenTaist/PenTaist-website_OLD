@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/articles.css">
+    <link rel="stylesheet" href="css/outils.css">
     <title>PenTaist - Outils</title>
 </head>
 <body>
@@ -19,6 +19,298 @@
         <nav class="navbar-social">
             <a href="https://discord.gg/TDXXq3XxrW"><img src="../img/discord.png" alt="discord"></a>
         </nav>
+    </div>
+    <div class="menu">
+        <h2>Table des matières :</h2>
+        <h3>I - OSINT ></h3>
+        <a href="#shodan">> Shodan.io</a>
+        <a href="#littlebrowser">> Little Brother</a>
+        <a href="#maltego">> Maltego</a>
+        <a href="#recon-ng">> Recon-ng</a>
+        <h3>II - Steganographie ></h3>
+        <a href="#steghide">> Steghide</a>
+        <a href="#exiftool">> Exif Tool</a>
+        <a href="#strings">> Strings</a>
+        <a href="#binwalk">> BinWalk</a>
+        <h3>III - Social Engineering ></h3>
+        <a href="#set">> SET</a>
+        <a href="#msf">> Metasploit Framework</a>
+        <a href="#seeker">> Seeker</a>
+        <a href="#">> Ngrock</a>
+        <h3>IV - Outils de "Santé" ></h3>
+        <a href="#rkhunter">> RKhunter</a>
+        <a href="#fail2ban">> Fail2ban</a>
+        <a href="#iptables">> IpTables</a>
+        <a href="#htop">> Htop</a>
+    </div>
+    <div class="parties">
+        <div class="osint">
+            <h1>I - OSINT</h1>
+            <br>
+            <div class="shodan_txtandimg">
+                <h2 id="shodan">Shodan.io</h2>
+                <img src="img/shodan.jpg" alt="sodan">
+            </div>
+            <br>
+            <p>Shodan est un moteur de recherche créé en 2009 par John Matherly. Ce site référence le résultat de balayages de ports massifs effectués sur le réseau Internet. Son nom fait référence à SHODAN, un personnage des jeux vidéo System Shock et System Shock 2.</p>
+            <p>Vous avez juste à chercher une ip ou un mot clé comme "cameras" et vous avez accès à tout les appareils vulnérables</p>
+            <a href="https://shodan.io/">Accèder à Shodan.io</a>
+            <br>
+            <div class="littlebrother_txtandimg">
+                <h2 id="littlebrowser">Little Brother</h2>
+                <img src="img/little_brother.png" alt="littlebrother">
+            </div>
+            <br>
+            <p>LittleBrother est un outil de collectes d'informations (OSINT) qui vise à effectuer des recherches sur une personne française, suisse, luxembourgeoise ou belge. Il fournit divers modules qui permettent des recherches efficaces. LittleBrother ne requiert pas de clé API ni d'identifiant de connexion.</p>
+            <p>LittleBrother a été développé pour faire des recherches sur soi-même et pour voir les informations privées et sensibles que l'on peut laisser derrière sur les réseaux sociaux. Je n'encourage en aucun cas l'utilisation de cet outil sur une autre personne que soi-même ou d'utiliser cet outil à mauvais escient. Les auteurs de LittleBrother ne peuvent etre tenu pour responsable de l'utilisation de son outil.</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>python3 littlebrother.py</p>
+            <hr>
+            <a href="https://github.com/lulz3xploit/LittleBrother">Télécharger Little Brother</a>
+            <br>
+            <div class="maltego_txtandimg">
+                <h2 id="maltego">Maltego</h2>
+                <img src="img/maltego.jpg" alt="maltego">
+            </div>
+            <br>
+            <p>Maltego est un outil open source d'intelligence et d'analyse de liens graphiques permettant de collecter et de connecter des informations pour des tâches d'enquête. Maltego est une application Java qui fonctionne sous Windows, Mac et Linux. Maltego est utilisé par un large éventail d'utilisateurs, allant des professionnels de la sécurité aux enquêteurs médico-légaux, aux journalistes d'investigation et aux chercheurs.​</p>
+            <a href="https://www.maltego.com/downloads/">Télécharger Maltego</a>
+            <br>
+            <div class="recon-ng_txtandimg">
+                <h2 id="recon-ng">Recon-ng</h2>
+                <img src="img/recon-ng.PNG" alt="recon-ng">
+            </div>
+            <br>
+            <p>Recon-ng est un framework de collecte d’information web fonctionnant sur le même principe que Metasploit. Il est implémenté par défaut dans Kali. Il utilise des modules de recherche mails, sous-domaines, sites web…</p>
+            <hr>
+            <h4>Installation :</h4>
+            <p>git clone https://github.com/lanmaster53/recon-ng.git</p>
+            <p>cd recon-ng</p>
+            <p>pip install -r REQUIREMENTS</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>./recon-ng</p>
+            <p>Pour en savoir plus sur les commandes cliquer<a href="https://hackertarget.com/recon-ng-tutorial/"> ici</a></p>
+            <hr>
+            <a href="https://github.com/lanmaster53/recon-ng">Recon-ng GitHub</a>
+            <br>
+        </div>
+        <div class="steganographie">
+            <h1>II - Steganographie</h1>
+            <br>
+            <div class="steghide_txtandimg">
+                <h2 id="steghide">Steghide</h2>
+                <img src="img/steghide.png" alt="steghide">
+            </div>
+            <br>
+            <p>Steghide est un programme de stéganographie capable de cacher des données dans différents types de fichiers image et audio. Les fréquences d'échantillonnage respectives des couleurs ne sont pas modifiées, ce qui rend l'enrobage résistant aux tests statistiques de premier ordre.</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>Utilisation :</p>
+            <p>steghide -h</p>
+            <hr>
+            <p>Cacher du texte dans un fichier :</p>
+            <p>echo "SUPER SECRET" > secret.txt</p>
+            <p>steghide embed -cf image.jpg -ef secret.txt</p>
+            <hr>
+            <p>Extraire les données d'un fichier :</p>
+            <p>steghide extract -sf image.jpg</p>
+            <p>PASSWORD</p>
+            <hr>
+            <p>Afficher les infos d'un fichier :</p>
+            <p>steghide info image.jpg</p>
+            <hr>
+            <a href="https://github.com/StefanoDeVuono/steghide">StegHide GitHub</a>
+            <br>
+            <a href="http://steghide.sourceforge.net/download.php">StegHide windows</a>
+            <br>
+            <div class="exiftool_txtandimg">
+                <h2 id="exiftool">Exif Tool</h2>
+                <img src="img/exiftool.png" alt="exiftool">
+            </div>
+            <br>
+            <p>ExifTool est un logiciel gratuit et open source pour lire, écrire et manipuler des métadonnées d'images, audio, vidéo et PDF. Il est indépendant de la plate-forme, disponible à la fois en tant que bibliothèque Perl et application de ligne de commande.</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>exiftool fichier.pdf</p>
+            <hr>
+            <a href="https://github.com/exiftool/exiftool">ExifTool GitHub</a>
+            <br>
+            <a href="https://exiftool.org/">ExifTool windows</a>
+            <br>
+            <h2 id="strings">Strings</h2>
+            <img src="img/strings.png" alt="strings">
+            <br>
+            <p>strings est une commande Unix qui permet de sortir sur la console les caractères affichables d'un fichier ou d'un flux.</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>strings fichier.jpg</p>
+            <hr>
+            <br>
+            <div class="binwalk_txtandimg">
+                <h2 id="binwalk">BinWalk</h2>
+                <img src="img/binwalk.svg" alt="binwalk">
+            </div>
+            <br>
+            <p>Binwalk est un outil permettant de rechercher dans une image binaire donnée des fichiers intégrés et du code exécutable. Plus précisément, il est conçu pour identifier les fichiers et le code intégrés à l'intérieur des images du micrologiciel. Binwalk utilise la bibliothèque libmagic, elle est donc compatible avec les signatures magiques créées pour l'utilitaire de fichiers Unix.</p>
+            <p>Binwalk inclut également un fichier de signature magique personnalisé qui contient des signatures améliorées pour les fichiers que l'on trouve couramment dans les images de micrologiciel telles que les fichiers compressés/archivés, les en-têtes de micrologiciel, les noyaux Linux, les chargeurs de démarrage, les systèmes de fichiers, etc.</p>
+            <p>Ce package est un package vide, car l'outil binaire est déjà fourni avec la bibliothèque, dépendance de ce package.</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>Scanner un fichier binaire :</p>
+            <p>binwalk /root/binaire.exe</p>
+            <hr>
+            <p>Extraire les fichier d'un binaire :</p>
+            <p>binwalk --extract --directory /root/binwalk /root/binaire.exe</p>
+            <hr>
+            <p>Spécifier une signature :</p>
+            <p>binwalk --extract --matryoshka --depth [2] /root/bianaire.exe</p>
+            <hr>
+            <a href="https://github.com/ReFirmLabs/binwalk">BinWalk GitHub</a>
+            <br>
+            <a href="https://blog.eldernode.com/install-and-use-binwalk-on-windows/#Install_Binwalk_on_Windows">Installer BinWalk sur windows</a>
+            <br>
+        </div>
+        <div class="social-engineering">
+            <h1>III - Social Engineering</h1>
+            <br>
+            <div class="set_txtandimg">
+                <h2 id="set">SET</h2>
+                <img src="img/set.svg" alt="set">
+            </div>
+            <p>Social Engineering Toolkit, en français « boite à outils pour l'Ingénierie sociale », est un logiciel développé par TrustedSec et écrit par David Kennedy en python. Il est open-source et multiplateforme et propose un choix de fonctions permettant diverses attaques basées sur l'hameçonnage informatique.</p>
+            <hr>
+            <h4>Installation :</h4>
+            <p>git clone https://github.com/trustedsec/social-engineer-toolkit.git</p>
+            <p>pip3 install -r requirements.txt</p>
+            <p>python3 setup.py</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>setoolkit ou ./setoolkit</p>
+            <hr>
+            <a href="https://github.com/trustedsec/social-engineer-toolkit">SET GitHub</a>
+            <br>
+            <a href="https://securityonline.info/install-social-engineering-toolkit-set-windows/">Utiliser SET sur windows</a>
+            <br>
+            <div class="msf_txtandimg">
+                <h2 id="msf">Metasploit Framework</h2>
+                <img src="img/msf.jpg" alt="metasploit">
+            </div>
+            <br>
+            <p>Metasploit, Metasploit Pen Testing Tool, est un projet en relation avec la sécurité des systèmes informatiques. Son but est de fournir des informations sur les vulnérabilités de systèmes informatiques, d'aider à la pénétration et au développement de signatures pour les systèmes de détection d'intrusion.</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>msfconsole</p>
+            <hr>
+            <a href="https://github.com/rapid7/metasploit-framework">Metasploit Framework GitHub</a>
+            <br>
+            <a href="https://www.metasploit.com/download">Metasploit Framework windows</a>
+            <br>
+            <div class="seeker_txtandimg">
+                <h2 id="seeker">Seeker</h2>
+                <img src="img/seeker.png" alt="seeker">
+            </div>
+            <br>
+            <p>Il s'agit d'un script nommé Seeker que vous hébergez sur votre serveur ou votre machine, qui tourne avec PHP, qui utilise Ngrok pour l'url et qui permet de récupérer une localisation très précise d'une personne.</p>
+            <hr>
+            <h4>Installation :</h4>
+            <p>git clone https://github.com/thewhiteh4t/seeker.git</p>
+            <p>sudo chmod +x install.sh && sudo ./install.sh</p>
+            <p>python3 seeker.py</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>python3 seeker.py</p>
+            <hr>
+            <a href="https://github.com/thewhiteh4t/seeker.git">Seeker GitHub</a>
+            <br>
+            <div class="ngrock_txtandimg">
+                <h2 id="ngrock">Ngrock</h2>
+                <img src="img/ngrock.png" alt="ngrock">
+            </div>
+            <br>
+            <p>Ngrok est un outil qui permet de rendre votre poste de développement web local accessible depuis l’extérieur, via un tunnel sécurisé, depuis une url du type https://azerty.ngrok.io.</p>
+            <p>Cette url est accessible par n’importe qui (vos clients, vos collègues...) et depuis n’importe où. De plus, Ngrok prend en charge pour vous les configurations délicates de pare-feu, en s’occupant d’ouvrir les ports nécessaires, en toute sécurité.</p>
+            <p>Un des grands avantages est de pouvoir tester les méthodes de paiements. En effet, Ngrok vous fournit une url accessible de l’extérieur, elle peut donc également être contactée par les PSP. Conséquence : on peut recevoir les informations sur l’état des paiements sur son projet local et tester la cinématique complète de paiement et de traitement des commandes.</p>
+            <p>Autre avantage, l’outil met à disposition une interface qui permet de suivre en direct les requêtes HTTP faites sur votre url. On peut ainsi vérifier les requêtes et les relancer manuellement autant de fois qu’on le désire.</p>
+            <p>Cerise sur le gâteau, vous pouvez également, pour plus de sécurité, configurer un mot de passe pour ne pas ouvrir votre poste à n’importe qui.</p>
+            <hr>
+            <h4>Installation :</h4>
+            <p>curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok</p>
+            <p>ngrok config add-authtoken TOKEN</p>
+            <p>Enregistrez vous sur le site de ngrock pour obtenir votre auth token</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>ngrok http 80</p>
+            <hr>
+            <a href="https://ngrok.com/">Ngrock site officiel</a>
+            <br>
+        </div>
+        <div class="outils-de-sante">
+            <h1>IV - Outils de "santé"</h1>
+            <br>
+            <div class="rkhunter_txtandimg">
+                <h2 id="rkhunter">RKhunter</h2>
+                <img src="img/rkhunter.png" alt="rkhunter">
+            </div>
+            <br>
+            <p>rkhunter est un programme Unix qui permet de détecter les rootkits, portes dérobées et exploits. Pour cela, il compare les hash SHA-256, SHA-512, SHA1 et MD5 des fichiers importants avec les hash connus, qui sont accessibles à partir d'une base de données en ligne.</p>
+            <hr>
+            <h4>Installation :</h4>
+            <p>sudo apt install rkhunter</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>Mettre à jour RKhunter :</p>
+            <p>rkhunter --update</p>
+            <hr>
+            <p>Chercher les RootKits et autres menaces :</p>
+            <p>rkhunter --check</p>
+            <hr>
+            <a href="https://github.com/installation/rkhunter">RKhunter GitHub</a>
+            <br>
+            <div class="fail2ban_txtandimg">
+                <h2 id="fail2ban">Fail2ban</h2>
+                <img src="img/fail2ban.jpg" alt="fail2ban">
+            </div>
+            <br>
+            <p>Fail2ban est un framework de prévention contre les intrusions, écrit en Python. Il fonctionne sur les systèmes POSIX possédant une interface de contrôle des paquets ou un pare-feu.</p>
+            <a href="https://buzut.net/installer-et-parametrer-fail2ban/">Configurer Fail2Ban</a>
+            <br>
+            <div class="iptables_txtandimg">
+                <h2 id="iptables">IpTables</h2>
+                <img src="img/iptables.jpg" alt="iptatbles">
+            </div>
+            <br>
+            <p>iptables est un logiciel libre de l'espace utilisateur Linux grâce auquel l'administrateur système peut configurer les chaînes et règles dans le pare-feu en espace noyau.</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>Afficher les règles :</p>
+            <p>iptables -L</p>
+            <hr>
+            <p>Autoriser un port :</p>
+            <p>TCP : iptables -A INPUT -p tcp -m tcp --sport 80 -j ACCEPT</p>
+            <p>UDP : iptables -A INPUT -p tcp -m udp --sport 80 -j ACCEPT</p>
+            <hr>
+            <p>Interdire un port :</p>
+            <p>TCP : iptables -A INPUT -p tcp -m tcp --sport 80 -j DROP</p>
+            <p>UDP : iptables -A INPUT -p udp -m tcp --sport 80 -j DROP</p>
+            <hr>
+            <br>
+            <div class="htop_txtandimg">
+                <h2 id="htop">Htop</h2>
+                <img src="img/htop.png" alt="htop">
+            </div>
+            <br>
+            <p>htop est un moniteur système pour les systèmes d’exploitation type Unix très similaire à top, qui fonctionne comme lui en mode Terminal, mais qui dispose d'un environnement en mode texte plus convivial que ce dernier. Il est programmé en C à l'aide de la bibliothèque ncurses.</p>
+            <hr>
+            <h4>Installation :</h4>
+            <p>sudo apt install htop</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>htop</p>
+            <hr>
+            <br>
+        </div>
     </div>
 </body>
 </html>
