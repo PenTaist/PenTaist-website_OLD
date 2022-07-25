@@ -115,70 +115,79 @@
 }
 
 .shodan_txtandimg img {
+    border-radius: 10px;
     width: 20%;
     height: auto;
 }
 
 .littlebrother_txtandimg img {
+    border-radius: 10px;
     width: 40%;
     height: auto;
 }
 
 .maltego_txtandimg img {
+    border-radius: 10px;
     width: 30%;
     height: auto;
 }
 
 .recon-ng_txtandimg img {
+    border-radius: 10px;
     width: 35%;
     height: auto;
 }
 
 .exiftool_txtandimg img {
+    border-radius: 10px;
     width: 30%;
     height: auto;
 }
 
 .binwalk_txtandimg img {
+    border-radius: 10px;
     width: 20%;
     height: auto;
 }
 
 .set_txtandimg img {
+    border-radius: 10px;
     width: 20%;
     height: auto;
 }
 
 .msf_txtandimg img {
+    border-radius: 10px;
     width: 25%;
     height: auto;
 }
 
 .seeker_txtandimg img {
+    border-radius: 10px;
     width: 25%;
     height: auto;
 }
 
 .rkhunter_txtandimg img {
+    border-radius: 10px;
     width: 25%;
     height: auto;
 }
 
 .fail2ban_txtandimg img {
+    border-radius: 10px;
     width: 20%;
     height: auto;
 }
 
 .iptables_txtandimg img {
+    border-radius: 10px;
     width: 20%;
     height: auto;
 }
 
 .htop_txtandimg img {
+    border-radius: 10px;
     width: 30%;
     height: auto;
-}
-
-.parties img {
-    border-radius: 10px;
 }
