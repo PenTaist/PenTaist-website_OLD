@@ -113,3 +113,22 @@
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
+
+.john img, .hashcat img, .aircrack-ng img, .hydra img {
+    border-radius: 10px;
+}
+
+.aircrack-ng img, .hydra img {
+    width: 30%;
+    height: auto;
+}
+
+.john img {
+    width: 20%;
+    height: auto;
+}
+
+.crunch img {
+    width: 40%;
+    height: auto;
+}

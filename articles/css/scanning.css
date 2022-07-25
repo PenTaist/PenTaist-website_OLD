@@ -118,3 +118,33 @@
     text-align: center;
     color: red;
 }
+
+.gobuster-dirbuster-dirsearch_img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.gobuster-dirbuster-dirsearch_img img {
+    margin: 0 1%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.nikto img {
+    width: 10%;
+    height: auto;
+}
+
+.joomscan img {
+    border-radius: 10px;
+    width: 30%;
+    height: auto;
+}
+
+.wpscan img {
+    border-radius: 10px;
+    width: 30%;
+    height: auto;
+}
