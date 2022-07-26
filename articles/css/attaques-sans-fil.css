@@ -147,3 +147,12 @@
     margin-top: 1%;
     margin-bottom: 1%;
 }
+
+.bluelog_txtandimg img {
+    border-radius: 10px;
+}
+
+.bluesnarfer_txtandimg img {
+    width: 30%;
+    height: auto;
+}
