@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/attaques-sans-fil.css">
+    <title>PenTaist - Attaques Sans-Fil</title>
+</head>
+<body>
+    <div class="topbar">
+        <nav class="navbar-links">
+            <a href="../index.html"><strong>Accueil</strong></a>
+            <a href="../categories.html"><strong>Catégories</strong></a>
+            <a href="../credits.html"><strong>Credits</strong></a>
+        </nav>
+        <nav class="navbar-social">
+            <a href="https://discord.gg/TDXXq3XxrW"><img src="../img/discord.png" alt="discord"></a>
+        </nav>
+    </div>
+    <div class="menu">
+        <h2>Table des matières :</h2>
+        <h3>I - Introduction ></h3>
+        <a href="#c-quoi">> Qu'es ce qu'une attaques sans-fil ?</a>
+        <a href="#avantages-et-inconvénients">> Avantages et Inconvénients</a>
+        <a href="#attaques-wifi">> Attaques Wifi</a>
+        <a href="#attaques-bluetooth">> Attaques Bluetooth</a>
+        <h3>II - Les outils</h3>
+        <h4>WIFI ></h4>
+        <a href="#aircrack-ng">> Suite Aircrack-ng</a>
+        <a href="#wifiphisher">> Wifiphisher</a>
+        <a href="#airgeddon">> Airgeddon</a>
+        <h4>BLUETOOTH ></h4>
+        <a href="#bluelog">> BlueLog</a>
+        <a href="#bluesnarfer">> BlueSnarfer</a>
+        <a href="#bluediving">> BlueDiving</a>
+        <h3>IV - Conclusion</h3>
+        <a href="#conclusion">> Conclusion</a>
+    </div>
+    <div class="parties">
+        <div class="introduction">
+            <h1>I - Introduction</h1>
+            <br>
+            <h2 id="c-quoi">Qu'es ce qu'une attaque sans-fil ?</h2>
+            <p>Une attaque sans-fil consiste à écouter les transmissions des différents utilisateurs du réseau sans fil, et de récupérer n'importe qu'elles données transitant sur le réseau si celles-ci ne sont pas cryptées. Il s'agit d'une attaque sur la confidentialité.</p>
+            <br>
+            <h2 id="avantages-et-inconvénients">Avantages et Inconvénients</h2>
+            <h4>Les avantages :</h4>
+            <p>- Voir tout ce qu'il se passe en temps réel</p>
+            <p>- Pouvoir réaliser l'attaque à distance</p>
+            <p>- Probabilité plus élevée de trouver ce que l'on cherche (phishing/failles humaines)</p>
+            <h4>Les inconvénients :</h4>
+            <p>- Attque plus lente car elle dépend de votre connexion ou de celle de la victime</p>
+            <p>- Si la victime s'y connais un peu, elle peut vous chopper car elle a la possibilité de voir ce qu'il se passe sur son réseau/équipement</p>
+            <p>- Obligation d'avoir un VPN/proxy sinon votre adresse IP est visible et en cas de plainte, on peut remonter jusqu'as vous</p>
+            <br>
+            <h2 id="attaques-wifi">Attaques Wifi</h2>
+            <p>Les attaques wifi consistes à s'infiltrer sur un réseau wifi et y faire des choses malveillantes (phishing, attaques MITM, DDOS etc...)</p>
+            <p>Dans cet article je vais vous montrer les techniques pour cracker le mot de passe wifi afin de s'y connecter.</p>
+            <p>Il y a 2 principales méthodes pour hacker le mot de passe wifi :</p>
+            <p>- Attaques par capture du handhsake et ensuite BruteForce</p>
+            <p>- Attaques par phishing (Evil Twin, fausse page de mise a jour etc...)</p>
+            <p>Cet 2 méthodes on leur avantages et inconvénients, par exemple, la 1ere méthode est plus simple à réaliser mais cela peut prendre beaucoup de temp de BruteForce le mot de passe ci celui-ci est complexe alors que la 2eme méthode est plus compliquée à réaliser mais vous avez plus de chance d'avoir le mot de passe</p>
+            <br>
+            <h2 id="attaques-bluetooth">Attques Bluetooth</h2>
+            <p>Les attaques bluetooth consistes à se connecter à un appareil bluetooth sans y a voir été autorisé par l'appareil/utilisateur et ensuite de récupérer des informations utiles (dans le cas d'un téléphone portable, son carnet d'adresse, ses fichiers etc...)</p>
+            <p>Il existe plusieurs types d'attaques bluetooth :</p>
+            <p>Le Bluejacking :</p>
+            <p>Le Bluejacking consiste simplement à envoyer un message (ou son/image) non-sollicité à quelqu'un via le protocole Bluetooth. Pour cela, une propriété du handshake d'autorisation qui permet d'afficher le nom de l'équipement est utilisée pour transmettre des messages non-sollicités. Cette technique ne présente pas de risque si ce n'est la méconnaissance des utilisateurs qui peuvent être amenés à exécuter un logiciel et se faire attaquer par ce biais. Le bluejacking est également utilisé dans des campagnes publicitaires ou à des fins plus personnelles. Ainsi Bluetoothing, Bluedating et Bluechating sont des variantes du Bluejacking orientées sur la rencontre de personnes et le partage d'activités diverses, à l'instar d'autres technologies telles que MSN ou les SMS. Elles n'ont pas de lien direct avec la sécurité. </p>
+            <p>Le Blueprinting :</p>
+            <p>Le Blueprinting est une attaque qui s'inspire du fingerprinting propre aux hôtes sur les réseaux filaires (PC, server, etc.). Elle vise à identifier tant que faire se peut l'équipement utilisant Bluetooth, son modèle, son fabricant et éventuellement sa version de firmware, permettant ainsi de cibler les attaques suivantes. Chaque élément possède en effet une adresse physique, codée sur 48 bits et unique, contenant une partie propre au fabricant et une autre spécifique à l'élément. De plus, certains éléments indiquent clairement les services qu'ils proposent au moyen du protocole SDP. L'ensemble de ces informations permet d'émettre des hypothèses sur la nature exacte de l'élément attaqué.</p>
+            <p>Le Scanning :</p>
+            <p>A la manière des ports utilisés par la paire TCP/IP, il est possible de scanner un équipement pour connaître les applications communicant via les 2 protocoles RFCOMM et L2CAP</p>
+            <p>Le Hijacking :</p>
+            <p>Il est possible de prendre la place d'un clavier équipé de la technologie Bluetooth en se connectant au service HID à sa place et en proposant des paramètres adéquats. Suivant le mode de sécurité utilisé, la connexion sera autorisée et un accès aux frappes clavier sera possible.</p>
+            <p>Le Bluesnarfing :</p>
+            <p>Le Bluesnarfing est une attaque utilisant une vulnérabilité dans le firmware des anciens équipements Bluetooth; elle vise à forcer une connexion puis à accéder à une partie des données (privée) de la victime. Pour cela, l'attaquant se connecte au service OBEX Push Profile (OPP) qui est habituellement accessible sans authentification. Il effectue ensuite des commandes GET sur un certain nombre de fichiers que la vulnérabilité lui permet alors de télécharger. Une variante consiste à utiliser le service OBEX FTP pour obtenir cette fois-ci un accès en lecture et écriture. Des attaques de Bluesnarfing ont été effectuées à plus d'1 km de distance de la victime, en utilisant des antennes directionnelles à la manière du wardriving pour les réseaux Wifi.</p>
+            <p>Le Bluebugging :</p>
+            <p>Le Bluebugging est une attaque utilisant une autre vulnérabilité dans le firmware des anciens équipements Bluetooth, trouvée en tentant de reproduire l'attaque du Bluesnarfing; elle permet d'utiliser les commandes AT de l'équipement à l'insu de son propriétaire, et donc d'accéder aux données de celui-ci, de passer des appels facturés à la victime, etc...</p>
+            <p>Le Car whisperer :</p>
+            <p>Le car-whisperer est une attaque spécifique aux kits main-libre des téléphones portables, basée sur une faiblesse du chiffrement (en particulier son implémentation dans ce type d'équipements) et permet d'écouter les conversations effectuées avec ces kits. De plus, il faut noter que les connexions Bluetooth de ce type d'éléments sont habituellement sécurisées par des clés ayant des valeurs par défaut -0000 ou 1234- afin d'en faciliter la configuration et l'utilisation. </p>
+            <p>DDOS :</p>
+            <p>Cette attaque, bien que peu probable vu la distance d'opération requise, est relativement efficace puisqu'elle rend non-seulement l'équipement inopérant, mais elle peut également lui vider les batteries. Une implémentation se base sur le "Ping of Death" bien connu des années 90, en l'adaptant aux communications Bluetooth et en particulier au protocole L2CAP.</p>
+            <br>
+        </div>
+        <div class="outils">
+            <h1>II - Outils</h1>
+            <br>
+            <h1>WIFI :</h1>
+            <br>
+            <div class="aircrack_txtandimg">
+                <h2 id="aircrack-ng">Suite Aircrack-ng</h2>
+                <img src="img/airmon-ng.png" alt="airmon-ng">
+                <img src="img/airodump-ng.png" alt="airodump-ng">
+                <img src="img/aireplay-ng.gif" alt="aireplay-ng">
+            </div>
+            <p>J'ai déjà parlé de Aircrack-ng sur <a href="https://pentaist.netlify.app/articles/cracking.html#aircrack-ng">cette page</a> mais là on vas plutôt s'intéresser à airmon-ng, airodump-ng et airodump-ng car se sont ces 3 autres outils de la suite aircrack qui vont nous permettre de hacker le mot de passe wifi</p>
+            <h3>Airmon-ng :</h3>
+            <p>Cet outil permet de passer sa carte réseau externe en mode moniteur afin d'être en capacité d'écouter le trafic réseau et de faire de "l'injection de packets réseau"</p>
+            <p>En effet, pour pouvoir faire des attaques wifi, il est obligatoire d'avoir en sa possession une carte réseau externe. Voici un lien pour vous aider à en acheter une qui seras compatible avec kali linux et avec le mode moniteur : <a href="https://www.kali-linux.fr/cartes-wifi-compatibles">Carte compatibles kali linux</a></p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>Passer la carte en mode moniteur :</p>
+            <p>airmon-ng start wlan0</p>
+            <hr>
+            <p>Repasser la carte en mode managed :</p>
+            <p>airmon-ng stop wlan0mon</p>
+            <hr>
+            <br>
+            <h3>Airodump-ng :</h3>
+            <p>Cet outil permet, une fois que la cart est en mode moniteur, de scanner tout les réseaux autour de vous et même de voir l'adresse MAC des gens qui sont connectés à ce réseau</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>airodump-ng wlan0mon</p>
+            <hr>
+            <br>
+            <h3>Aireplay-ng :</h3>
+            <p>Cet outil permet d'injecter des packets aux réseaux wifi, ce sont généralement des packets pour déconnecter les gens du réseaux afin qu'ils se reconnectent et qu'ils nous donnent le handhsake du réseau</p>
+            <hr>
+            <h4>Commande :</h4>
+            <p>Envoyer un packet pour déconnecter un client :</p>
+            <p>aireplay-ng -0 1 -a 00:14:6C:7E:40:80 -c 00:0F:B5:AE:CE:9D wlan0mon</p>
+            <hr>
+            <br>
+            <div class="wifiphisher_txtandimg">
+                <h2 id="wifiphisher">Wifiphisher</h2>
+                <img src="img/wifiphisher.png" alt="wifiphisher">
+            </div>
+            <p>Ce package contient un outil de sécurité qui monte des attaques de phishing automatisées contre les réseaux WiFi afin d'obtenir des mots de passe secrets ou d'autres informations d'identification. Il s'agit d'une attaque d'ingénierie sociale qui, contrairement à d'autres méthodes, n'inclut aucune force brute. C'est un moyen facile d'obtenir des informations d'identification à partir de portails captifs et de pages de connexion tierces ou de mots de passe secrets WPA/WPA2.</p>
+            <hr>
+            <h4>Installation :</h4>
+            <p>sudo apt install wifiphisher</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>Créer un faux réseau wifi et lancer une fausse page de mise a jour si quelqu'un se connecte :</p>
+            <p>wifiphisher -nJ -e "Fake WIFI" -T firmware-upgrade</p>
+            <hr>
+            <br>
+            <div class="airgeddon_txtandimg">
+                <h2 id="airgeddon">Airgeddon</h2>
+                <img src="img/airgeddon.jpg" alt="airgeddon">
+            </div>
+            <p>airgeddon est un wrapper d'outils tiers piloté par menu pour auditer les réseaux sans fil avec de nombreuses fonctionnalités.</p>
+            <hr>
+            <h4>Installation :</h4>
+            <p>sudo apt install airgeddon</p>
+            <hr>
+            <h4>Commande :</h4>
+            <p>sudo airgeddon</p>
+            <h4 class="warning">ATTENTION : il faudras installer pas mal de dépendances pour airgeddon, elles sont toutes affichées au lancement d'aigeddon</h4>
+            <hr>
+            <br>
+            <h1>BLUETOOTH :</h1>
+            <br>
+            <h2 id="bluelog">BlueLog</h2>
+            <p>Bluelog est un scanner Bluetooth conçu pour vous indiquer le plus rapidement possible le nombre d'appareils détectables dans une zone. Il est destiné à être utilisé comme un outil d'étude de site, identifiant le nombre de cibles Bluetooth possibles dans l'environnement environnant.</p>
+            <hr>
+            <h4>Installation :</h4>
+            <p>sudo apt install bluelog</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>bluelog --help</p>
+            <hr>
+            <br>
+            <h2 id="bluesnarfer">BlueSnarfer</h2>
+            <hr>
+            <h4>Installation :</h4>
+            <p>sudo apt install bluesnarfer</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>bluesnarfer --help</p>
+            <hr>
+            <br>
+            <div class="bluediving_txtandimg">
+                <h2 id="bluediving">BlueDiving</h2>
+                <img src="img/bluediving.jpg" alt="bluediving">
+            </div>
+            <p>Bluediving est la suite de pénétration Bluetooth de nouvelle génération. Il implémente plusieurs exploits comme BlueBug, BlueSnarf, BlueSnarf++ ou BlueSmack, des outils comme carwhisperer, redfang et bss et offre également des fonctionnalités comme un scanneur RFCOMM et un générateur de paquets L2CAP.</p>
+            <hr>
+            <h4>Installation :</h4>
+            <p>git clone https://github.com/balle/bluediving.git</p>
+            <p>Pour le reste, allez check sur le <a href="https://github.com/balle/bluediving">GitHub</a> de BlueDiving</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p></p>
+            <hr>
+            <div class="links_end_bluediving">
+                <a href="https://github.com/balle/bluediving">BlueDiving GitHub</a>
+                <a href="https://sourceforge.net/projects/bluediving/files/">Télécharger BlueDiving</a>
+            </div>
+            <br>
+        </div>
+        <div class="conclusion">
+            <h1>III - Conclusion</h1>
+            <br>
+            <h2 id="conclusion">Conclusion</h2>
+            <p>- Une attaque sans-fil consiste à s'introduire dans un réseau sans-fil (wifi, bluetooth etc...) afin d'y faire des choses malveillantes (DDOS, attaques MITM etc...)</p>
+            <p>- Il existe pas mal d'outils pour réaliser des attaques sans-fil par phishing ou par capture du handhsake</p>
+            <h4 class="warning">ATTENTION : S'introduire dans un réseau sans-fil sans y avoir été autorisé est totalement illégal et je ne serais tenus en aucun cas responssable de vos actes</h4>
+        </div>
+    </div>
+</body>
+</html>
