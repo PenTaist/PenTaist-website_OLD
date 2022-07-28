@@ -1,0 +1,125 @@
+/* TOPBAR + NAVBARS */
+.topbar {
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.navbar-links {
+    width: 50%;
+    height: auto;
+    margin: 1%;
+}
+
+.navbar-links a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 2%;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navbar-links a:hover {
+    color: gray;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navbar-social {
+    margin: 1%;
+}
+
+.navbar-social img {
+    width: 30px;
+    height: 30px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navbar-social img:hover {
+    opacity: 0.8;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+/* --------------------------------------------------------------------------------------------------------- */
+/* MENU */
+.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 98%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 1%;
+}
+
+.menu a {
+    text-decoration: none;
+    margin: 0.5% 1%;
+    color: #000;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.menu h2, .menu h3, .menu h4 {
+    margin: 1%;
+}
+/* PARTIES */
+.parties {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 1%;
+}
+
+.parties a {
+    text-decoration: none;
+    color: blue;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.parties a:hover {
+    text-decoration: underline;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+/* MAIN */
+.warning {
+    color: red;
+    text-align: center;
+}
+
+.parties img {
+    width: 30%;
+    height: auto;
+}
