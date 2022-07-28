@@ -12,7 +12,7 @@
 }
 
 .navbar-links {
-    width: 50%;
+    width: 80%;
     height: auto;
     margin: 1%;
 }
@@ -87,7 +87,7 @@
 .menu h2, .menu h3 {
     margin: 1%;
 }
-
+/* PARTIES */
 .parties {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -113,7 +113,7 @@
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-
+/* MAIN */
 .john img, .hashcat img, .aircrack-ng img, .hydra img {
     border-radius: 10px;
 }
