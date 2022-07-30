@@ -1,6 +1,6 @@
 /* TOPBAR + NAVBARS */
 .topbar {
-    background-color: #fff;
+    background-color: #1a1919;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -18,7 +18,7 @@
 }
 
 .navbar-links a {
-    color: #000;
+    color: grey;
     text-decoration: none;
     margin: 0 2%;
     -webkit-transition: all 0.3s;
@@ -27,7 +27,7 @@
 }
 
 .navbar-links a:hover {
-    color: gray;
+    color: #fff;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -63,7 +63,7 @@
             flex-direction: column;
     width: 98%;
     height: auto;
-    background-color: #fff;
+    background-color: #1a1919;
     border-radius: 10px;
     margin: 1%;
 }
@@ -71,7 +71,7 @@
 .menu a {
     text-decoration: none;
     margin: 0.5% 1%;
-    color: #000;
+    color: #ccc;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -141,4 +141,12 @@
     border-radius: 10px;
     width: 30%;
     height: auto;
+}
+
+h1 {
+    color: #fff;
+}
+
+h2, h3, h4, p {
+    color: #ccc;
 }

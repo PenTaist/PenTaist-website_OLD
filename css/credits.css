@@ -1,9 +1,9 @@
 body {
-    background-color: #ccc;
+    background-color: #202020;
 }
 /* TOPBAR + NAVBARS */
 .topbar {
-    background-color: #fff;
+    background-color: #1a1919;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -21,7 +21,7 @@ body {
 }
 
 .navbar-links a {
-    color: #000;
+    color: grey;
     text-decoration: none;
     margin: 0 2%;
     -webkit-transition: all 0.3s;
@@ -30,7 +30,7 @@ body {
 }
 
 .navbar-links a:hover {
-    color: gray;
+    color: #fff;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -56,7 +56,7 @@ body {
 }
 
 .navbar-links a:nth-child(3) {
-    color: gray;
+    color: #fff;
 }
 /* --------------------------------------------------------------------------------------------------------- */
 /* CREDITS */
