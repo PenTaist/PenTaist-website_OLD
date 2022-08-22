@@ -17,6 +17,26 @@
     margin: 1%;
 }
 
+.navbar-links a {
+    color: grey;
+    text-decoration: none;
+    margin: 0 2%;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navbar-social {
+    margin: 1%;
+}
+
 .discord img {
     width: 30px;
     height: 30px;
@@ -32,25 +52,6 @@
     -o-transition: all 0.3s;
     transition: all 0.3s;
     margin-right: 10px;
-}
-
-.navbar-links a:hover {
-    color: #fff;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.navbar-social {
-    margin: 1%;
-}
-
-.navbar-social img {
-    width: 30px;
-    height: 30px;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
 }
 
 .navbar-social img:hover {
