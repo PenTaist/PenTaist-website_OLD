@@ -17,13 +17,21 @@
     margin: 1%;
 }
 
-.navbar-links a {
-    color: grey;
-    text-decoration: none;
-    margin: 0 2%;
+.discord img {
+    width: 30px;
+    height: 30px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+}
+
+.youtube img {
+    width: 40px;
+    height: 30px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-right: 10px;
 }
 
 .navbar-links a:hover {
