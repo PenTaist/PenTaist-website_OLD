@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/scanning.css">
+    <title>PenTaist - Scanning</title>
+</head>
+<body>
+    <div class="topbar">
+        <nav class="navbar-links">
+            <a href="../index.html"><strong>Accueil</strong></a>
+            <a href="../categories.html"><strong>Catégories</strong></a>
+            <a href="../credits.html"><strong>Credits</strong></a>
+        </nav>
+        <nav class="navbar-social">
+            <a class="discord" href="https://discord.gg/TDXXq3XxrW"><img src="../img/discord.png" alt="discord"></a>
+        </nav>
+    </div>
+    <div class="menu">
+        <h2>Table des matières :</h2>
+        <h3>I - Introduction ></h3>
+        <a href="#c-quoi">> Qu'es ce que le Scanning ?</a>
+        <a href="#pk-scanner">> Pourquoi scanner ?</a>
+        <h3>II - Les outils</h3>
+        <a href="#nmap">> Nmap</a>
+        <a href="#gobuster-dirbuster-et-dirsearch">> GoBuster, DirBuster et DirSearch</a>
+        <a href="#nikto">> Nikto</a>
+        <a href="#joomscan">> JoomScan</a>
+        <a href="#wpscan">> WpScan</a>
+        <h3>III - Les WordLists pour le scanning de sites web</h3>
+        <a href="#wl-dirbuster">> DirBuster</a>
+        <a href="wl-dirsearch">> DirSearch</a>
+        <h3>IV - Conclusion</h3>
+        <a href="#conclusion">> Conclusion</a>
+    </div>
+    <div class="parties">
+        <div class="introduction">
+            <h1>I - Introduction</h1>
+            <br>
+            <h2 id="c-quoi">Qu'es ce que le Scanning ?</h2>
+            <br>
+            <p>Le Scanning c'est, comme son nom l'indique, le fait de scanner un serveur pour y trouver des services comme un serveur SSH, FTP etc...</p>
+            <p>Le scanning est très important pour trouver des services vulnérables comme un serveur FTP pas à jour par exemple.</p>
+            <br>
+            <h2 id="pk-scanner">Pourquoi scanner ?</h2>
+            <br>
+            <p>Comme dit plus tôt, le scanning est très important pour trouver des services vulnérables. Il permet aussi de savoir sur quel OS se trouve le serveur scanné</p>
+        </div>
+        <div class="les-outils">
+            <h1>II - Les outils</h1>
+            <br>
+            <div class="nmap">
+                <h2 id="nmap">Nmap</h2>
+                <img src="img/nmap.png" alt="nmap">
+            </div>
+            <br>
+            <p>Nmap est un outil aussi connus que génial. En effet, c'est l'outil principal que vous allez utiliser pour scanner les serveurs afin d'y trouver des services. Nmap vous permet de connaitres les services actifs sur le serveur scanné mais aussi le systèmes d'exploitation sur lequel est le serveur. Nmap intègre même des plugins pour scanner les services et y trouver des vulnérabilités</p>
+            <h4>Commandes :</h4>
+            <p>Utilisation :</p>
+            <p>nmap -A 10.10.10.10</p>
+            <hr>
+            <p>Scanner tout les ports :</p>
+            <p>nmap -A 10.10.10.10 -p-</p>
+            <hr>
+            <p>Scanner les services pour y trouver des vulnérabilités :</p>
+            <p>nmap -A 10.10.10.10 --script vuln</p>
+            <hr>
+            <h4>Une version windows est disponible pour Nmap : <a href="https://nmap.org/download#windows">Nmap for windows</a></h4>
+            <br>
+            <div class="gobuster-dirbuster-dirsearch">
+                <h2 id="gobuster-dirbuster-et-dirsearch">Gobuster, Dirbuster et DirSearch</h2>
+                <div class="gobuster-dirbuster-dirsearch_img">
+                    <img src="img/gobuster.png" alt="gobuster">
+                    <img src="img/dirbuster.png" alt="dirbuster">
+                    <img src="img/dirsearch.png" alt="dirsearch">
+                </div>
+            </div>
+            <br>
+            <p>Ces 3 outils sont tous des outils de scannig de site web, GoBuster et DirSearch sont des outils en ligne de commandes alors que DirBuster est un outil avec une interface graphique.</p>
+            <p>Ils scannent les fichiers/dossiers cachés sur un site web afin de trouver des données intéressantes</p>
+            <h4>Commandes DirSearch :</h4>
+            <p>Utilisation : dirsearch -u http://10.10.10.10/ -w wordlist.txt</p>
+            <hr>
+            <p>Afficher l'aide :</p>
+            <p>dirsearch -h</p>
+            <hr>
+            <p>Ajouter des extenssions :</p>
+            <p>dirsearch -u http://10.10.10.10/ -e php,hyml,txt,bak,htm -w wordlist.txt</p>
+            <hr>
+            <h4>Une version windows est disponible pour DirSearch : <a href="https://github.com/maurosoria/dirsearch">DirSearch for windows</a></h4>
+            <h4>Commandes GoBuster :</h4>
+            <h4>ATTENTION : GoBuster n'est pas inclus dans kali, pour l'installer : sudo apt install gobuster -y</h4>
+            <p>Utilisation :</p>
+            <p>gobuster dir -u http://10.10.10.10/ -w wordlist.txt</p>
+            <hr>
+            <p>Afficher l'aide :</p>
+            <p>gobuster -h</p>
+            <hr>
+            <p>Ajouter des extenssions :</p>
+            <p>gobuster dir -u http://10.10.10.10/ -w wordlist.txt -x php,html,htm,txt,bak</p>
+            <hr>
+            <h4>Utilisation DirBuster :</h4>
+            <p>DirBuster à une interface graphique, je vous redirige vers <a href="https://www.kali.org/tools/dirbuster/">ce site</a> pour en savoir plus mais cet outils est très facile à utiliser</p>
+            <h4>Une version windows est disponible pour DirBuster : <a href="https://sourceforge.net/projects/dirbuster/">DirBuster for windows</a></h4>
+            <br>
+            <div class="nikto">
+                <h2 id="nikto">Nikto</h2>
+                <img src="img/nikto.svg" alt="nikto">
+            </div>
+            <br>
+            <p>Nikto est un scanneur CGI écrit en Perl, utilisant LibWhisker de rfp pour effectuer des contrôles de sécurité ou d'information rapides.</p>
+            <h4>Commandes :</h4>
+            <p>Utilisation :</p>
+            <p>nikto -host http://10.10.10.10/</p>
+            <hr>
+            <p>Afficher l'aide :</p>
+            <p>nikto -h</p>
+            <br>
+            <div class="joomscan">
+                <h2 id="joomscan">JoomScan</h2>
+                <img src="img/joomscan.jpeg" alt="joomscan">
+            </div>
+            <br>
+            <p>JoomScan, abréviation de [Joom]la Vulnerability [Scan]ner. C'est un projet en langage de programmation perl pour détecter les vulnérabilités du CMS Joomla et les analyser.</p>
+            <h4>Commandes :</h4>
+            <p>Utilisation :</p>
+            <p>jommscan [OPTION]</p>
+            <hr>
+            <p>Scanner un site joomla :</p>
+            <p>joomscan --url http://joomla.com/</p>
+            <hr>
+            <br>
+            <div class="wpscan">
+                <h2 id="wpscan">WpScan</h2>
+                <img src="img/wpscan.jpg" alt="wpscan">
+            </div>
+            <br>
+            <p>WPScan analyse les installations WordPress distantes pour trouver des problèmes de sécurité.</p>
+            <h4>Commandes :</h4>
+            <p>Utilisation :</p>
+            <p>wpscan --url [URL] [OPTIONS]</p>
+            <hr>
+            <p>Chercher les utilisateurs du site :</p>
+            <p>wpscan --url http://10.10.10.10/ -eu</p>
+            <hr>
+            <p>BruteForcer la page de login :</p>
+            <p>wpscan --url http://10.10.10.10/ --passwords /usr/share/wordlists/rockyou.txt</p>
+            <hr>
+            <h4>Une version windows est disponible pour WpScan : <a href="https://miloserdov.org/?p=4005">Installer WpScan sur windows</a></h4>
+        </div>
+        <div class="wordlists">
+            <h1>III - Les WordLists pour le scanning de sites web</h1>
+            <br>
+            <h2 id="wl-dirbuster">DirBuster</h2>
+            <br>
+            <a href="https://github.com/daviddias/node-dirbuster/tree/master/lists">Télécharger les wordlists de DirBuster</a>
+            <br>
+            <h2 id="wl-dirsearch">DirSearch</h2>
+            <br>
+            <a href="https://github.com/maurosoria/dirsearch/tree/master/db">Télécharger la wordlist de DirSearch</a>
+            <br>
+        </div>
+        <div class="conclusion">
+            <h1>IV - Conclusion</h1>
+            <br>
+            <h2 id="conclusion">Conclusion</h2>
+            <br>
+            <p>- Le Scanning est très important car il permet de scanner un serveur pour afin de découvrir les services qu'il héberge pour pouvoir ensuite exploiter de potentielles failles sur les services en question</p>
+            <p>- Des outils existes pour scanner les serveur, les sites web et même les CMS</p>
+            <h4 class="warning">Gardez bien en tête que scanner un serveur qui ne vous appartient pas est illégal et que vous risquez gros si vous vous faites prendre</h4>
+        </div>
+    </div>
+</body>
+</html>

