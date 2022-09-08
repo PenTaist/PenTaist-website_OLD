@@ -37,21 +37,12 @@
     margin: 1%;
 }
 
-.discord img {
+.navbar-social img {
     width: 30px;
     height: 30px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
-}
-
-.youtube img {
-    width: 40px;
-    height: 30px;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    margin-right: 10px;
 }
 
 .navbar-social img:hover {
