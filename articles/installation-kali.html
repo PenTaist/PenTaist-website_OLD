@@ -29,6 +29,8 @@
         <a href="#iso">> Sur un ordinateur physique</a>
         <a href="#machine-virtuelle">> Sur une machine virtuelle</a>
         <a href="#kali-live">> Sur une clé USB (Kali Live USB)</a>
+        <a href="#kali-wsl2">> Kali Linux WSL2</a>
+        <a href="#kali-nethunter">> Kali NetHunter (android)</a>
         <h3>III - Après l'installation ></h3>
         <a href="#keyboard">> Mettre le clavier en français</a>
         <a href="#langue-systeme">> Mettre la langue du système en français</a>
@@ -106,6 +108,36 @@
             <p>9 - Une fois l'installation terminée, banchez la clé sur un pc, démarrer dessus et choisissez l'option "Live USB persistance"</p>
             <img src="img/installer-kali_17.png" alt="17">
             <br>
+            <h2 id="kali-wsl2">Kali Linux WSL2</h2>
+            <br>
+            <p>1 - Lancer un powershell en administrateur</p>
+            <p>2 - Activer "Virtual Machine Platform" avec cette commande : Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform</p>
+            <p>3 - Activer "Windows Subsystem for Linux" avec cette commande : Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</p>
+            <p>4 - Redémarrer l'ordinateur</p>
+            <p>5 - Ouvrir un powershell en administrateur</p>
+            <p>6 - Activier WSL version 2 avec cette commande : wsl --set-default-version 2</p>
+            <p>7 - Ouvrir le Microsoft Store</p>
+            <p>8 - Chercher "Kali Linux" dans la barre de recherche</p>
+            <p>9 - Installer Kali Linux</p>
+            <p>10 - Lancer un terminal puis taper la commande : kali</p>
+            <p>11 - Indiquez un nom d'utilisateur et un mot de passe pour kali</p>
+            <br>
+            <h2 id="kali-nethunter">Kali NetHunter (android)</h2>
+            <br>
+            <p>1 - Télécharger termux sur le play store</p>
+            <p>2 - Taper les commandes suivantes :</p>
+            <p>- apt update -y</p>
+            <p>- apt upgrade -y</p>
+            <p>- apt update -y</p>
+            <p>- apt install wget -y</p>
+            <p>- wget -O install-nethunter-termux https://offs.ec/2MceZWr</p>
+            <p>- chmod +x install-nethunter-termux</p>
+            <p>- ./install-nethunter-termux</p>
+            <p>Cette opération prend pas mal de temps</p>
+            <p>Quand il vous demande si vous voulez supprimer le fichier "rootfs" faites "n" puis "entrer"</p>
+            <p>A la fin, tapez "nh"</p>
+            <p>Pour démarrer kali nethunter, il faudras taper "nh" ou "nethunter" dans le terminal de termux</p>
+            <p><strong>Si cela ne fonctionne pas ou pas correctement je vous invite à visionner <a href="https://www.youtube.com/watch?v=KxOGyuGq0Ts">cette vidéo</a></strong></p>
         </div>
         <div class="post-install">
             <h1>III - Après l'installation</h1>
@@ -145,5 +177,11 @@
             <p>3 - Redemarrez Kali</p>
         </div>
     </div>
+    <script>
+
+        console.log("Salut toi, si tu est développeur et que tu te sens seul, n'hésite pas à venir faire un petit tour sur notre serveur discord ;)")
+        console.log("https://discord.gg/TDXXq3XxrW")
+        
+    </script>
 </body>
 </html>
