@@ -51,6 +51,10 @@
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
+
+.navbar-social img:first-child {
+    margin-right: 10px;
+}
 /* ------------------------------------------------------------------------------------------------------ */
 /* MENU */
 .menu {

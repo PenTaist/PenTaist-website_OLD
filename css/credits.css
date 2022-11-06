@@ -58,6 +58,10 @@ body {
 .navbar-links a:nth-child(3) {
     color: #fff;
 }
+
+.navbar-social img:first-child {
+    margin-right: 10px;
+}
 /* --------------------------------------------------------------------------------------------------------- */
 /* CREDITS */
 .credits {

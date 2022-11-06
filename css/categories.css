@@ -59,6 +59,10 @@ body {
 .navbar-links a:nth-child(2) {
     color: #fff;
 }
+
+.navbar-social img:first-child {
+    margin-right: 10px;
+}
 /* -------------------------------------------------------------------------------------------------------- */
 /* CATEGORIES */
 .categories1 {
