@@ -5,177 +5,187 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="css/installation-kali.css">
     <title>PenTaist - Installation Kali</title>
 </head>
 <body>
-    <div class="topbar">
-        <nav class="navbar-links">
-            <a href="../index.html"><strong>Accueil</strong></a>
-            <a href="../categories.html"><strong>Catégories</strong></a>
-            <a href="../credits.html"><strong>Credits</strong></a>
-        </nav>
-        <nav class="navbar-social">
-            <a href="https://discord.gg/TDXXq3XxrW"><img src="../img/discord.png" alt="discord"></a>
-            <a href="https://t.me/hackbdd"><img src="/img/telegram.png" alt="telegram"></a>
-        </nav>
-    </div>
-    <div class="menu">
-        <h2>Tables des matières :</h2>
-        <h3>I - Introduction ></h3>
-        <a href="#kali-c-quoi">> Kali Linux, c'est quoi ?</a>
-        <a href="#qui-l-utilise">> Qui utilise Kali Linux ?</a>
-        <h3>II - Les méthodes d'installation de Kali Linux ></h3>
-        <a href="#iso">> Sur un ordinateur physique</a>
-        <a href="#machine-virtuelle">> Sur une machine virtuelle</a>
-        <a href="#kali-live">> Sur une clé USB (Kali Live USB)</a>
-        <a href="#kali-wsl2">> Kali Linux WSL2</a>
-        <a href="#kali-nethunter">> Kali NetHunter (android)</a>
-        <h3>III - Après l'installation ></h3>
-        <a href="#keyboard">> Mettre le clavier en français</a>
-        <a href="#langue-systeme">> Mettre la langue du système en français</a>
-        <a href="#maj">> Mettre à jour le système</a>
-    </div>
-    <div class="parties">
-        <div class="introduction">
-            <h1>I - Introduction</h1>
-            <br>
-            <h2 id="kali-c-quoi">Kali Linux c'est quoi ?</h2>
-            <br>
-            <p>Kali Linux est une distribution GNU/Linux sortie le 13 mars 2013, basée sur Debian. La distribution a pris la succession de BackTrack et est financée et maintenue à jour par Offensive Security.</p>
-            <p>Kali Linux est une distribution spécialisée dans la hacking et embarque beaucoup d'outils.</p>
-            <br>
-            <h2 id="qui-l-utilise">Qui utilise Kali Linux ?</h2>
-            <br>
-            <p>Principalement les hackers mais il y a aussi les gens qui travaillent dans la cybersécurité</p>
-            <br>
+    <div class="container">
+        <div class="topbar">
+            <nav class="navbar">
+                <div class="links">
+                    <a href="/index.html">Accueil</a>
+                    <a href="/categories.html" class="active">Catégories</a>
+                    <a href="/credits.html">Credits</a>
+                </div>
+                <div class="social">
+                    <a href="https://discord.gg/TDXXq3XxrW" target="_blank">
+                        <img src="/img/discord.png" alt="discord-logo">
+                    </a>
+                </div>
+            </nav>
         </div>
-        <div class="methodes-d-installation">
-            <h1>II - Les méthodes d'installation de Kali Linux</h1>
-            <br>
-            <h2 id="iso">Sur un ordinateur physique</h2>
-            <br>
-            <p>1 - Allez sur <a href="https://www.kali.org/get-kali/#kali-bare-metal">cette page</a></p>
-            <p>2 - Cliquez sur le boutton télécharger</p>
-            <img src="img/installer-kali_1.png" alt="1">
-            <p>3 - Ensuite téléchargez <a href="https://www.balena.io/etcher/">cet outil windows</a> et cliquez sur le boutton de téléchargement</p>
-            <img src="img/installer-kali_2.png" alt="2">
-            <p>4 - Une fois que tout est téléchargé, installez BalenaEtcher</p>
-            <img src="img/installer-kali_3.png" alt="3">
-            <p>5 - Cliquez sur "Flash From File" et choisissez le fichier .iso de Kali Linux</p>
-            <p>6 - Ensuite, cliquez sur "Select Target" et choisissez la clé USB (minimum 8gb)</p>
-            <p>7 - Enfin, cliquez sur "Flash"</p>
-            <p>8 - Une fois le flash terminé, branchez la clé usb sur le pc ou vous voulez installer Kali Linux puis démarrez sur la clé</p>
-            <img src="img/installer-kali_4.png" alt="4">
-            <p>Pour savoir comment accèder au bios de votre ordinateur, cliquez <a href="https://www.malekal.com/acceder-bios-de-son-pc/">ici</a></p>
-            <p></p>
-            <br>
-            <h2 id="machine-virtuelle">Sur une machine virtuelle</h2>
-            <br>
-            <p>1 - Téléchargez VirtualBox <a href="https://www.virtualbox.org/wiki/Downloads">ici</a></p>
-            <img src="img/installer-kali_5.png" alt="5">
-            <p>2 - Téléchargez Kali Linux pour VirtuaBox <a href="https://www.kali.org/get-kali/#kali-virtual-machines">ici</a></p>
-            <img src="img/installer-kali_6.png" alt="6">
-            <p>3 - Ouvrez VirtuaBox et cliquez sur "importer"</p>
-            <img src="img/installer-kali_7.png" alt="7">
-            <p>4 - Une fois la VM importée, allez dans "configuration"</p>
-            <img src="img/installer-kali_8.png" alt="8">
-            <p>Changez la ram si vous pouvez en allouer plus</p>
-            <img src="img/installer-kali_9.png" alt="9">
-            <p>Très important, allez dans l'onglet "réseau" et mettez en "accès pas pont"</p>
-            <img src="img/installer-kali_10.png" alt="10">
-            <p>Enregistrez les modifications</p>
-            <p>5 - Démarrez la VM</p>
-            <img src="img/installer-kali_11.png" alt="11">
-            <p>Le clavier est en qwerty et le user/mot de passe est kali:kali</p>
-            <p>Rendez-vous <a href="#keyboard">ici</a> pour la configuration après l'installation</p>
-            <br>
-            <h2 id="kali-live">Sur une clé USB (Kali Live USB)</h2>
-            <br>
-            <p>1 - Prenez une clé usb d'au moins 32gb pour être tranquille niveau stockage</p>
-            <p>2 - Téléchargez Kali Live <a href="https://www.kali.org/get-kali/#kali-live">ici</a></p>
-            <img src="img/installer-kali_12.png" alt="12">
-            <p>3 - Téléchargez Rufus <a href="https://rufus.ie/fr/">ici</a></p>
-            <img src="img/installer-kali_13.png" alt="13">
-            <p>4 - Banchez la clé usb et lancez rufus</p>
-            <p>5 - Dans l'onglet "périférique" choisissez votre clé usb</p>
-            <img src="img/installer-kali_14.png" alt="14">
-            <p>6 - Dans l'onglet "type de démarrage" choisissez "image disque ou ISO" et cliquez sur "selection" pour selectionner le fichier iso de kali live</p>
-            <img src="img/installer-kali_15.png" alt="15">
-            <p>7 - Dans l'onglet "persistance" choisissez le maximum (pour une clé de 32gb, ca seras 20gb de persistance)</p>
-            <p>8 - Une fois que tout est bon, cliquez sur "démarrer" (ATTENTION : cela effaceras tout ce qu'il y a sur votre clé usb !)</p>
-            <img src="img/installer-kali_16.png" alt="16">
-            <p>9 - Une fois l'installation terminée, banchez la clé sur un pc, démarrer dessus et choisissez l'option "Live USB persistance"</p>
-            <img src="img/installer-kali_17.png" alt="17">
-            <br>
-            <h2 id="kali-wsl2">Kali Linux WSL2</h2>
-            <br>
-            <p>1 - Lancer un powershell en administrateur</p>
-            <p>2 - Activer "Virtual Machine Platform" avec cette commande : Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform</p>
-            <p>3 - Activer "Windows Subsystem for Linux" avec cette commande : Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</p>
-            <p>4 - Redémarrer l'ordinateur</p>
-            <p>5 - Ouvrir un powershell en administrateur</p>
-            <p>6 - Activier WSL version 2 avec cette commande : wsl --set-default-version 2</p>
-            <p>7 - Ouvrir le Microsoft Store</p>
-            <p>8 - Chercher "Kali Linux" dans la barre de recherche</p>
-            <p>9 - Installer Kali Linux</p>
-            <p>10 - Lancer un terminal puis taper la commande : kali</p>
-            <p>11 - Indiquez un nom d'utilisateur et un mot de passe pour kali</p>
-            <br>
-            <h2 id="kali-nethunter">Kali NetHunter (android)</h2>
-            <br>
-            <p>1 - Télécharger termux sur le play store</p>
-            <p>2 - Taper les commandes suivantes :</p>
-            <p>- apt update -y</p>
-            <p>- apt upgrade -y</p>
-            <p>- apt update -y</p>
-            <p>- apt install wget -y</p>
-            <p>- wget -O install-nethunter-termux https://offs.ec/2MceZWr</p>
-            <p>- chmod +x install-nethunter-termux</p>
-            <p>- ./install-nethunter-termux</p>
-            <p>Cette opération prend pas mal de temps</p>
-            <p>Quand il vous demande si vous voulez supprimer le fichier "rootfs" faites "n" puis "entrer"</p>
-            <p>A la fin, tapez "nh"</p>
-            <p>Pour démarrer kali nethunter, il faudras taper "nh" ou "nethunter" dans le terminal de termux</p>
-            <p><strong>Si cela ne fonctionne pas ou pas correctement je vous invite à visionner <a href="https://www.youtube.com/watch?v=KxOGyuGq0Ts">cette vidéo</a></strong></p>
+        <div class="social-tel">
+            <a href="https://discord.gg/TDXXq3XxrW" target="_blank">
+                <img src="/img/discord-complete.png" alt="discord-logo">
+            </a>
         </div>
-        <div class="post-install">
-            <h1>III - Après l'installation</h1>
-            <br>
-            <h2 id="keyboard">Mettre le clavier en français</h2>
-            <br>
-            <p>1 - Appuyez sur la touche WINDOWS et tapez "settings manager"</p>
-            <img src="img/installer-kali_18.png" alt="18">
-            <p>2 - Allez dans "keyboard" puis dans "layout"</p>
-            <img src="img/installer-kali_19.png" alt="19">
-            <p>3 - Décochez la case "Use system default"</p>
-            <img src="img/installer-kali_20.png" alt="20">
-            <p>4 - Cliquez sur "+ add" et cherchez "french" puis ajoutez le</p>
-            <img src="img/installer-kali_21.png" alt="21">
-            <p>5 - Ensuite cliquez une fois sur "english" puis cliquez sur "- remove"</p>
-            <img src="img/installer-kali_22.png" alt="22">
-            <br>
-            <h2 id="langue-systeme">Mettre la langue du système en français</h2>
-            <br>
-            <p>1 - Allez dans le terminal</p>
-            <p>2 - Tapez : sudo dpkg-reconfigure locales</p>
-            <img src="img/installer-kali_23.png" alt="23">
-            <p>3 - Descendez jusqu'as voir "English" puis appuiez sur la touche ESPACE</p>
-            <img src="img/installer-kali_24.png" alt="24">
-            <p>4 - Descendez encore un peu jusqu'as trouvez "FR_fr-UTF-8" puis appuiez sur la touche ESPACE et enfin sur la touche ENTRER</p>
-            <p>5 - Allez sur la langue FR et appuiez sur espace</p>
-            <img src="img/installer-kali_25.png" alt="25">
-            <p>6 - Redemarrez Kali</p>
-            <br>
-            <h2 id="maj">Mettre à jour le système</h2>
-            <br>
-            <p>1 - Allez dans le terminal et tapez : sudo apt update -y</p>
-            <img src="img/installer-kali_26.png" alt="26">
-            <p>2 - tapez ensuite : sudo apt upgrade -y</p>
-            <img src="img/installer-kali_27.png" alt="27">
-            <p>Cette opération prend plusieur heures donc soyez patient</p>
-            <p>3 - Redemarrez Kali</p>
+        <div class="menu">
+            <h2>Tables des matières :</h2>
+            <h3>I - Introduction ></h3>
+            <a href="#kali-c-quoi">> Kali Linux, c'est quoi ?</a>
+            <a href="#qui-l-utilise">> Qui utilise Kali Linux ?</a>
+            <h3>II - Les méthodes d'installation de Kali Linux ></h3>
+            <a href="#iso">> Sur un ordinateur physique</a>
+            <a href="#machine-virtuelle">> Sur une machine virtuelle</a>
+            <a href="#kali-live">> Sur une clé USB (Kali Live USB)</a>
+            <a href="#kali-wsl2">> Kali Linux WSL2</a>
+            <a href="#kali-nethunter">> Kali NetHunter (android)</a>
+            <h3>III - Après l'installation ></h3>
+            <a href="#keyboard">> Mettre le clavier en français</a>
+            <a href="#langue-systeme">> Mettre la langue du système en français</a>
+            <a href="#maj">> Mettre à jour le système</a>
+        </div>
+        <div class="parties">
+            <div class="introduction">
+                <h1>I - Introduction</h1>
+                <br>
+                <h2 id="kali-c-quoi">Kali Linux c'est quoi ?</h2>
+                <br>
+                <p>Kali Linux est une distribution GNU/Linux sortie le 13 mars 2013, basée sur Debian. La distribution a pris la succession de BackTrack et est financée et maintenue à jour par Offensive Security.</p>
+                <p>Kali Linux est une distribution spécialisée dans la hacking et embarque beaucoup d'outils.</p>
+                <br>
+                <h2 id="qui-l-utilise">Qui utilise Kali Linux ?</h2>
+                <br>
+                <p>Principalement les hackers mais il y a aussi les gens qui travaillent dans la cybersécurité</p>
+                <br>
+            </div>
+            <div class="methodes-d-installation">
+                <h1>II - Les méthodes d'installation de Kali Linux</h1>
+                <br>
+                <h2 id="iso">Sur un ordinateur physique</h2>
+                <br>
+                <p>1 - Allez sur <a href="https://www.kali.org/get-kali/#kali-bare-metal">cette page</a></p>
+                <p>2 - Cliquez sur le boutton télécharger</p>
+                <img src="img/installer-kali_1.png" alt="1">
+                <p>3 - Ensuite téléchargez <a href="https://www.balena.io/etcher/">cet outil windows</a> et cliquez sur le boutton de téléchargement</p>
+                <img src="img/installer-kali_2.png" alt="2">
+                <p>4 - Une fois que tout est téléchargé, installez BalenaEtcher</p>
+                <img src="img/installer-kali_3.png" alt="3">
+                <p>5 - Cliquez sur "Flash From File" et choisissez le fichier .iso de Kali Linux</p>
+                <p>6 - Ensuite, cliquez sur "Select Target" et choisissez la clé USB (minimum 8gb)</p>
+                <p>7 - Enfin, cliquez sur "Flash"</p>
+                <p>8 - Une fois le flash terminé, branchez la clé usb sur le pc ou vous voulez installer Kali Linux puis démarrez sur la clé</p>
+                <img src="img/installer-kali_4.png" alt="4">
+                <p>Pour savoir comment accèder au bios de votre ordinateur, cliquez <a href="https://www.malekal.com/acceder-bios-de-son-pc/">ici</a></p>
+                <p></p>
+                <br>
+                <h2 id="machine-virtuelle">Sur une machine virtuelle</h2>
+                <br>
+                <p>1 - Téléchargez VirtualBox <a href="https://www.virtualbox.org/wiki/Downloads">ici</a></p>
+                <img src="img/installer-kali_5.png" alt="5">
+                <p>2 - Téléchargez Kali Linux pour VirtuaBox <a href="https://www.kali.org/get-kali/#kali-virtual-machines">ici</a></p>
+                <img src="img/installer-kali_6.png" alt="6">
+                <p>3 - Ouvrez VirtuaBox et cliquez sur "importer"</p>
+                <img src="img/installer-kali_7.png" alt="7">
+                <p>4 - Une fois la VM importée, allez dans "configuration"</p>
+                <img src="img/installer-kali_8.png" alt="8">
+                <p>Changez la ram si vous pouvez en allouer plus</p>
+                <img src="img/installer-kali_9.png" alt="9">
+                <p>Très important, allez dans l'onglet "réseau" et mettez en "accès pas pont"</p>
+                <img src="img/installer-kali_10.png" alt="10">
+                <p>Enregistrez les modifications</p>
+                <p>5 - Démarrez la VM</p>
+                <img src="img/installer-kali_11.png" alt="11">
+                <p>Le clavier est en qwerty et le user/mot de passe est kali:kali</p>
+                <p>Rendez-vous <a href="#keyboard">ici</a> pour la configuration après l'installation</p>
+                <br>
+                <h2 id="kali-live">Sur une clé USB (Kali Live USB)</h2>
+                <br>
+                <p>1 - Prenez une clé usb d'au moins 32gb pour être tranquille niveau stockage</p>
+                <p>2 - Téléchargez Kali Live <a href="https://www.kali.org/get-kali/#kali-live">ici</a></p>
+                <img src="img/installer-kali_12.png" alt="12">
+                <p>3 - Téléchargez Rufus <a href="https://rufus.ie/fr/">ici</a></p>
+                <img src="img/installer-kali_13.png" alt="13">
+                <p>4 - Banchez la clé usb et lancez rufus</p>
+                <p>5 - Dans l'onglet "périférique" choisissez votre clé usb</p>
+                <img src="img/installer-kali_14.png" alt="14">
+                <p>6 - Dans l'onglet "type de démarrage" choisissez "image disque ou ISO" et cliquez sur "selection" pour selectionner le fichier iso de kali live</p>
+                <img src="img/installer-kali_15.png" alt="15">
+                <p>7 - Dans l'onglet "persistance" choisissez le maximum (pour une clé de 32gb, ca seras 20gb de persistance)</p>
+                <p>8 - Une fois que tout est bon, cliquez sur "démarrer" (ATTENTION : cela effaceras tout ce qu'il y a sur votre clé usb !)</p>
+                <img src="img/installer-kali_16.png" alt="16">
+                <p>9 - Une fois l'installation terminée, banchez la clé sur un pc, démarrer dessus et choisissez l'option "Live USB persistance"</p>
+                <img src="img/installer-kali_17.png" alt="17">
+                <br>
+                <h2 id="kali-wsl2">Kali Linux WSL2</h2>
+                <br>
+                <p>1 - Lancer un powershell en administrateur</p>
+                <p>2 - Activer "Virtual Machine Platform" avec cette commande : Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform</p>
+                <p>3 - Activer "Windows Subsystem for Linux" avec cette commande : Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</p>
+                <p>4 - Redémarrer l'ordinateur</p>
+                <p>5 - Ouvrir un powershell en administrateur</p>
+                <p>6 - Activier WSL version 2 avec cette commande : wsl --set-default-version 2</p>
+                <p>7 - Ouvrir le Microsoft Store</p>
+                <p>8 - Chercher "Kali Linux" dans la barre de recherche</p>
+                <p>9 - Installer Kali Linux</p>
+                <p>10 - Lancer un terminal puis taper la commande : kali</p>
+                <p>11 - Indiquez un nom d'utilisateur et un mot de passe pour kali</p>
+                <br>
+                <h2 id="kali-nethunter">Kali NetHunter (android)</h2>
+                <br>
+                <p>1 - Télécharger termux sur le play store</p>
+                <p>2 - Taper les commandes suivantes :</p>
+                <p>- apt update -y</p>
+                <p>- apt upgrade -y</p>
+                <p>- apt update -y</p>
+                <p>- apt install wget -y</p>
+                <p>- wget -O install-nethunter-termux https://offs.ec/2MceZWr</p>
+                <p>- chmod +x install-nethunter-termux</p>
+                <p>- ./install-nethunter-termux</p>
+                <p>Cette opération prend pas mal de temps</p>
+                <p>Quand il vous demande si vous voulez supprimer le fichier "rootfs" faites "n" puis "entrer"</p>
+                <p>A la fin, tapez "nh"</p>
+                <p>Pour démarrer kali nethunter, il faudras taper "nh" ou "nethunter" dans le terminal de termux</p>
+                <p><strong>Si cela ne fonctionne pas ou pas correctement je vous invite à visionner <a href="https://www.youtube.com/watch?v=KxOGyuGq0Ts">cette vidéo</a></strong></p>
+            </div>
+            <div class="post-install">
+                <h1>III - Après l'installation</h1>
+                <br>
+                <h2 id="keyboard">Mettre le clavier en français</h2>
+                <br>
+                <p>1 - Appuyez sur la touche WINDOWS et tapez "settings manager"</p>
+                <img src="img/installer-kali_18.png" alt="18">
+                <p>2 - Allez dans "keyboard" puis dans "layout"</p>
+                <img src="img/installer-kali_19.png" alt="19">
+                <p>3 - Décochez la case "Use system default"</p>
+                <img src="img/installer-kali_20.png" alt="20">
+                <p>4 - Cliquez sur "+ add" et cherchez "french" puis ajoutez le</p>
+                <img src="img/installer-kali_21.png" alt="21">
+                <p>5 - Ensuite cliquez une fois sur "english" puis cliquez sur "- remove"</p>
+                <img src="img/installer-kali_22.png" alt="22">
+                <br>
+                <h2 id="langue-systeme">Mettre la langue du système en français</h2>
+                <br>
+                <p>1 - Allez dans le terminal</p>
+                <p>2 - Tapez : sudo dpkg-reconfigure locales</p>
+                <img src="img/installer-kali_23.png" alt="23">
+                <p>3 - Descendez jusqu'as voir "English" puis appuiez sur la touche ESPACE</p>
+                <img src="img/installer-kali_24.png" alt="24">
+                <p>4 - Descendez encore un peu jusqu'as trouvez "FR_fr-UTF-8" puis appuiez sur la touche ESPACE et enfin sur la touche ENTRER</p>
+                <p>5 - Allez sur la langue FR et appuiez sur espace</p>
+                <img src="img/installer-kali_25.png" alt="25">
+                <p>6 - Redemarrez Kali</p>
+                <br>
+                <h2 id="maj">Mettre à jour le système</h2>
+                <br>
+                <p>1 - Allez dans le terminal et tapez : sudo apt update -y</p>
+                <img src="img/installer-kali_26.png" alt="26">
+                <p>2 - tapez ensuite : sudo apt upgrade -y</p>
+                <img src="img/installer-kali_27.png" alt="27">
+                <p>Cette opération prend plusieur heures donc soyez patient</p>
+                <p>3 - Redemarrez Kali</p>
+            </div>
         </div>
     </div>
     <script>

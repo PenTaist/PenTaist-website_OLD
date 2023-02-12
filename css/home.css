@@ -1,0 +1,112 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/img/kali.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.container h1 {
+    margin-top: 0;
+    padding-top: 1%;
+}
+
+.options {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.options, .boxs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.options .boxs div {
+    margin: 0 1%;
+    border-radius: 10px;
+    width: 250px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options .boxs .categories {
+    background-image: url('/img/categories.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.options .boxs .credits {
+    background-image: url('/img/credits.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.options .boxs .box {
+    filter: blur(1px);
+}
+
+.options .boxs .box:hover {
+    filter: blur(0);
+}
+
+.options .boxs .box h1 {
+    margin: 0;
+}
+
+.options .boxs a:hover {
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 760px) {
+    .options .boxs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .options .boxs div {
+        margin: 4.8% 0;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        background-position-x: -200px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .container {
+        background-position-x: -350px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        background-position-x: -450px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .container {
+        background-position-x: -500px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        background-position-x: -550px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .container {
+        background-position-x: -600px;
+    }
+}

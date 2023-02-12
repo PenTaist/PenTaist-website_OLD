@@ -1,62 +1,121 @@
-/* TOPBAR + NAVBARS */
 .topbar {
+    display: flex;
     background-color: #1a1919;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    height: 7vh;
+    width: 98.8vw;
+}
+
+.topbar .navbar {
     display: flex;
     width: 100%;
     height: auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
 }
 
-.navbar-links {
-    width: 80%;
-    height: auto;
-    margin: 1%;
+.topbar .navbar .links {
+    position: relative;
+    left: 1%;
+    top: 1%;
+    width: 50%;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    padding: 1vh;
 }
 
-.navbar-links a {
-    color: grey;
-    text-decoration: none;
-    margin: 0 2%;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+.topbar .navbar .links a {
+    margin: 0 2vh;
+    color: #ccc;
+    font-weight: 600;
 }
 
-.navbar-links a:hover {
-    color: #fff;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+.topbar .navbar .links a:hover {
+    color: #2d96ff;
 }
 
-.navbar-social {
-    margin: 1%;
+.topbar .navbar .links .active {
+    color: #2d96ff;
 }
 
-.navbar-social img {
+.topbar .navbar .links .active:hover {
+    color: #ccc;
+}
+
+.topbar .navbar .social {
+    position: relative;
+    right: 1%;
+    top: 1%;
+    width: 50%;
+    text-align: end;
+}
+
+.topbar .navbar .social img {
     width: 30px;
-    height: 30px;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    height: auto;
 }
 
-.navbar-social img:hover {
-    opacity: 0.8;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+.topbar .navbar .social a {
+    position: relative;
+    top: 1vh;
 }
 
-.navbar-social img:first-child {
-    margin-right: 10px;
+.social-tel {
+    display: none;
 }
-/* --------------------------------------------------------------------------------------------------------- */
-/* MENU */
+
+@media only screen and (max-width: 500px) {
+    .topbar {
+        width: 97vw;
+        height: 15vh;
+    }
+    
+    .topbar .navbar .social {
+        display: none;
+    }
+
+    .social-tel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 97vw;
+        height: auto;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+
+    .social-tel img {
+        width: 40vw;
+        height: auto;
+        margin-top: 1vh;
+        border-radius: 20px;
+        animation: discord-anim 1s infinite;
+    }
+
+    @keyframes discord-anim {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .topbar .navbar .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vh;
+    }
+
+    .topbar .navbar .links a {
+        padding: 1vh 0;
+    }
+}
+
 .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -91,7 +150,7 @@
 .menu h2, .menu h3, .menu h4 {
     margin: 1%;
 }
-/* PARTIES */
+
 .parties {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -117,7 +176,7 @@
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-/* MAIN */
+
 .warning {
     color: red;
     text-align: center;

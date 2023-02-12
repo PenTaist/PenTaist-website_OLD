@@ -1,365 +1,223 @@
-/* BODY */
-body {
-    background-color: #202020;
+.container {
+    width: 100vw;
+    height: 100vh;
 }
-/* TOPBAR + NAVBARS */
+
 .topbar {
+    display: flex;
     background-color: #1a1919;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    height: 7vh;
+    width: 100vw;
+}
+
+.topbar .navbar {
     display: flex;
     width: 100%;
     height: auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
 }
 
-.navbar-links {
-    width: 80%;
-    height: auto;
-    margin: 1%;
+.topbar .navbar .links {
+    position: relative;
+    left: 1%;
+    top: 1%;
+    width: 50%;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    padding: 1vh;
 }
 
-.navbar-links a {
-    color: grey;
-    text-decoration: none;
-    margin: 0 2%;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+.topbar .navbar .links a {
+    margin: 0 2vh;
+    color: #ccc;
+    font-weight: 600;
 }
 
-.navbar-links a:hover {
-    color: #fff;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+.topbar .navbar .links a:hover {
+    color: #2d96ff;
 }
 
-.navbar-social {
-    margin: 1%;
+.topbar .navbar .links .active {
+    color: #2d96ff;
 }
 
-.navbar-social img {
+.topbar .navbar .links .active:hover {
+    color: #ccc;
+}
+
+.topbar .navbar .social {
+    position: relative;
+    right: 1%;
+    top: 1%;
+    width: 50%;
+    text-align: end;
+}
+
+.topbar .navbar .social img {
     width: 30px;
-    height: 30px;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.navbar-social img:hover {
-    opacity: 0.8;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.navbar-links a:nth-child(2) {
-    color: #fff;
-}
-
-.navbar-social img:first-child {
-    margin-right: 10px;
-}
-/* -------------------------------------------------------------------------------------------------------- */
-/* CATEGORIES */
-.categories1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    width: 100%;
     height: auto;
-    margin: 1%;
 }
 
-.categories1 a {
-    text-decoration: none;
-    color: #fff;
+.topbar .navbar .social a {
+    position: relative;
+    top: 1vh;
 }
 
-.categories2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    width: 100%;
-    height: 0;
-    margin: 1%;
+.social-tel {
+    display: none;
 }
 
-.categories2 a {
-    text-decoration: none;
-    color: #fff;
-}
+@media only screen and (max-width: 500px) {
+    .topbar {
+        width: 99vw;
+        height: 15vh;
+    }
+    
+    .topbar .navbar .social {
+        display: none;
+    }
 
-.cracking {
-    background-image: url(../img/cracking.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 10px;
-    border-radius: 10px;
-    width: 300px;
-    height: 200%;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
+    .social-tel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: auto;
+        margin-top: 1vH;
+    }
 
-.scanning {
-    background-image: url(../img/scanning.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 10px;
-    border-radius: 10px;
-    width: 300px;
-    height: 200%;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
+    .social-tel img {
+        width: 40vw;
+        height: auto;
+        margin-top: 1vh;
+        border-radius: 20px;
+        animation: discord-anim 1s infinite;
+    }
 
-.outils {
-    background-image: url(../img/outils.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;    padding: 10px;
-    border-radius: 10px;
-    width: 300px;
-    height: 200%;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
+    @keyframes discord-anim {
+        0% {
+            transform: scale(1);
+        }
 
-.attaques-sans-fil {
-    margin-top: 60%;
-    background-image: url(../img/attaques-sans-fil.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;    padding: 10px;
-    border-radius: 10px;
-    width: 300px;
-    height: 210px;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.creation-virus {
-    margin-top: 60%;
-    background-image: url(../img/creation-virus.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;    padding: 10px;
-    border-radius: 10px;
-    width: 300px;
-    height: 210px;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.installation-kali {
-    margin-top: 60%;
-    background-image: url(../img/installation-kali.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;    padding: 10px;
-    border-radius: 10px;
-    width: 300px;
-    height: 210px;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.cracking:hover, .scanning:hover, .outils:hover, .attaques-sans-fil:hover, .creation-virus:hover, .installation-kali:hover {
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
+        50% {
             transform: scale(1.1);
-}
+        }
 
-@media only screen and (max-width: 900px) {
-    .categories1 {
-        position: absolute;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        width: 100%;
-        height: auto;
-        margin: 1%;
-        padding: 0;
+        100% {
+            transform: scale(1);
+        }
     }
 
-    .categories2 {
-        display: block;
-        position: relative;
-        top: 0;
-        left: 1%;
-        margin: 1%;
-        padding: 0;
-        width: 100%;
-        height: 0;
+    .topbar .navbar .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vh;
     }
 
-    .categories1 a, .categorie2 a {
-        width: 100%;
-        height: auto;
-        margin: 1%;
-        padding: 0;
-    }
-
-    .creation-virus, .installation-kali {
-        margin: 1%;
-    }
-
-    .attaques-sans-fil {
-        margin-left: 1%;
-    }
-
-    .cracking, .scanning, .outils, .attaques-sans-fil, .creation-virus, .installation-kali {
-        width: 95%;
-        height: auto;
-        display: block;
-        padding: 0;
-        height: 100px;
-    }
-
-    .cracking h1, .scanning h1, .outils h1, .attaques-sans-fil h1, .creation-virus h1, .installation-kali h1 {
-        padding-top: 3%;
-    }
-
-    .cracking:hover, .scanning:hover, .outils:hover, .attaques-sans-fil:hover, .creation-virus:hover, .installation-kali:hover {
-        -webkit-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transition: all 0.3s;
-        -webkit-transform: scale(1.03);
-            -ms-transform: scale(1.03);
-                transform: scale(1.03);
+    .topbar .navbar .links a {
+        padding: 1vh 0;
     }
 }
 
-@media only screen and (max-width: 700px) {
-    .attaques-sans-fil {
-        margin-top: 65%;
+.container .main {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .main .line {
+    display: flex;
+    justify-content: space-around;
+    margin: 10vh 0;
+}
+
+.container .main .line div {
+    border-radius: 2vh;
+    width: 20vw;
+    height: 25vh;
+    text-align: center;
+}
+
+.container .main .line a {
+    padding: 10vh;
+    color: #ccc;
+    font-weight: 700;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container .main .line div:hover {
+    transform: scale(1.1);
+}
+
+.container .main .line .cracking {
+    background-image: url('/img/cracking.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container .main .line .scanning {
+    background-image: url('/img/scanning.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container .main .line .tools {
+    background-image: url('/img/outils.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container .main .line .wireless-attacks {
+    background-image: url('/img/attaques-sans-fil.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container .main .line .build-malwares {
+    background-image: url('/img/creation-virus.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container .main .line .install-kali {
+    background-image: url('/img/installation-kali.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container, .topbar, .social-tel {
+        width: 97vw!important;
+    }
+
+    .container .main .line {
+        flex-direction: column;
+        width: 98vw;
+        height: 100vh;
+        align-items: center;
+        margin: 0;
+        justify-content: space-around;
+    }
+
+    .container .main .line div {
+        width: 90vw;
+        height: 30vh;
+        margin: 1vh 0;
+    }
+
+    .container .main .line div:hover {
+        transform: scale(1.03);
+    }
+
+    .container .main .line a {
+        padding: 13vh;
     }
 }
 
-@media only screen and (max-width: 650px) {
-    .attaques-sans-fil {
-        margin-top: 70%;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .attaques-sans-fil {
-        margin-top: 75%;
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    .attaques-sans-fil {
-        margin-top: 80%;
-    }
-}
-
-@media only screen and (max-width: 511px) {
-    .attaques-sans-fil {
-        margin-top: 85%;
-    }
-}
-
-@media only screen and (max-width: 479px) {
-    .attaques-sans-fil {
-        margin-top: 90%;
-    }
-}
-
-@media only screen and (max-width: 452px) {
-    .attaques-sans-fil {
-        margin-top: 100%;
-    }
-}
-
-@media only screen and (max-width: 405px) {
-    .attaques-sans-fil {
-        margin-top: 110%;
-    }
-}
-
-@media only screen and (max-width: 368px) {
-    .attaques-sans-fil {
-        margin-top: 120%;
-    }
-}
-
-@media only screen and (max-width: 338px) {
-    .attaques-sans-fil {
-        margin-top: 130%;
+@media only screen and (max-width: 320px) {
+    .topbar, .line, .container, .social-tel {
+        width: 95vw!important;
     }
 }

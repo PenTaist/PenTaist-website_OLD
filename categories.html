@@ -4,65 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/categories.css">
-    <title>PenTaist - Catégories</title>
+    <title>PenTaist > Catégories</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/categories.css">
 </head>
 <body>
-    <div class="topbar">
-        <nav class="navbar-links">
-            <a href="index.html"><strong>Accueil</strong></a>
-            <a href="categories.html"><strong>Catégories</strong></a>
-            <a href="credits.html"><strong>Credits</strong></a>
-        </nav>
-        <nav class="navbar-social">
-            <a href="https://discord.gg/TDXXq3XxrW"><img src="img/discord.png" alt="discord"></a>
-            <a href="https://t.me/hackbdd"><img src="img/telegram.png" alt="telegram"></a>
-        </nav>
+    <div class="container">
+        <div class="topbar">
+            <nav class="navbar">
+                <div class="links">
+                    <a href="index.html">Accueil</a>
+                    <a href="categories.html" class="active">Catégories</a>
+                    <a href="credits.html">Credits</a>
+                </div>
+                <div class="social">
+                    <a href="https://discord.gg/TDXXq3XxrW" target="_blank">
+                        <img src="img/discord.png" alt="discord-logo">
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="social-tel">
+            <a href="https://discord.gg/TDXXq3XxrW" target="_blank">
+                <img src="img/discord-complete.png" alt="discord-logo">
+            </a>
+        </div>
+        <div class="main">
+            <div class="line">
+                <div class="cracking">
+                    <a href="articles/cracking.html">Cracking</a>
+                </div>
+                <div class="scanning">
+                    <a href="articles/scanning.html">Scanning</a>
+                </div>
+                <div class="tools">
+                    <a href="articles/outils.html">Outils</a>
+                </div>
+            </div>
+            <div class="line">
+                <div class="wireless-attacks">
+                    <a href="articles/attaques-sans-fil.html">Attaques sans-fil</a>
+                </div>
+                <div class="build-malwares">
+                    <a href="articles/creation-virus.html">Création virus</a>
+                </div>
+                <div class="install-kali">
+                    <a href="articles/installation-kali.html">Installation kali</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <div class="categories1">
-        <a href="articles/cracking.html">
-            <div class="cracking">
-                <h1>Cracking</h1>
-            </div>
-        </a>
-        <a href="articles/scanning.html">
-            <div class="scanning">
-                <h1>Scanning</h1>
-            </div>
-        </a>
-        <a href="articles/outils.html">
-            <div class="outils">
-                <h1>Outils</h1>
-            </div>
-        </a>
-    </div>
-    <div class="categories2">
-        <a href="articles/attaques-sans-fil.html">
-            <div class="attaques-sans-fil">
-                <h1>Attaques Sans-Fil</h1>
-            </div>
-        </a>
-        <a href="articles/creation-virus.html">
-            <div class="creation-virus">
-                <h1>Création Virus</h1>
-            </div>
-        </a>
-        <a href="articles/installation-kali.html">
-            <div class="installation-kali">
-                <h1>Installation Kali</h1>
-            </div>
-        </a>
-    </div>
-    <script>
-
-        console.log("Salut toi, si tu est développeur et que tu te sens seul, n'hésite pas à venir faire un petit tour sur notre serveur discord ;)")
-        console.log("https://discord.gg/TDXXq3XxrW")
-        
-    </script>
 </body>
 </html>
